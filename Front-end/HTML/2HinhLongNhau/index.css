@@ -1,0 +1,40 @@
+div.empty-div {
+    position: relative;
+    background-color: deeppink;
+    height: 100px;
+    width: 200px;
+    margin: 30px;
+    padding: 10px;
+    border: 15px solid black;
+    perspective: 10px;
+    -webkit-perspective: 100px;
+}
+
+div.green-div {
+    padding: 60px;
+    text-shadow: 2px 4px 3px red, 4px 5px 4px blue, 7px 4px 2px grey, 9px 5px 2px deeppink;
+    font-family: cursive;
+
+    position: absolute;
+    background-color: #8abcda;
+    border: 1px solid white;
+    transform: rotateX(45deg);
+    -webkit-transform: rotateX(45deg);
+}
+
+div.green-div1 {
+    padding: 50px;
+    text-shadow: 2px 4px 3px red, 4px 5px 4px blue, 7px 4px 2px grey, 9px 5px 2px deeppink;
+    font-family: cursive;
+    position: absolute;
+
+    opacity: 0.6;
+    background-color: #8abcda;
+    border: 1px solid white;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(60deg);
+}
+
+html {
+    background-color: pink;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>Event of Modal</title>
+</head>
+<body>
+<h4>Có một vài sự kiện được phát ra (fired) khi Modal mở hoặc đóng. Và bạn có bắt các sự kiện này để thực hiện một điều gì đó. Sử dụng phương thức "on" của jQuery để ràng buộc sự kiện với hàm xử lý.</h4>
+<p><pre>
+    show.bs.modal	: Sự kiện này phát ra (fired) ngay trước khi Modal hiển thị.
+    shown.bs.modal	: Sự kiện này phát ra ngay sau khi Modal hiển thị.
+    hide.bs.modal	: Sự kiện này phát ra ngay trước khi Modal bị ẩn.
+    hidden.bs.modal	: Sự kiện này phát ra ngay sau khi Modal bị ẩn.
+</pre></p>
+<h5>Bạn có thể xử lý một trong các sự kiện trên giống dưới đây:</h5>
+<pre>
+    $('#myModal').on('shown.bs.modal', function (e) {
+        alert('Modal is successfully shown!');
+      });
+</pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

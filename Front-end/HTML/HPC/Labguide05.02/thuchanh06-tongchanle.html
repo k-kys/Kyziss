@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tính tổng các số chẵn và lẻ trong mảng</title>
+</head>
+<body>
+	<script>
+		//khai báo biến
+		var sochan=sole="";
+		var tongle=tongchan=0;
+		//khai báo mảng
+		var dataArr=[4,6,9,11,34,22,57,68,90,21,35,77];
+		//in ra số lượng phần tử mảng
+		document.write("Số phần tử trong mảng: "+dataArr.length+"<br/>");
+		//duyệt từng phần tử mảng
+		for(i=0;i<dataArr.length;i++){
+			//kiểm tra số chẵn lẻ
+			if(dataArr[i]%2==0){
+				//tính tổng các số chẵn sau mỗi lần nhập
+				tongchan+=dataArr[i]
+				//nếu lần đầu tiên thì không thêm dấu ',' trước
+				if(sochan.length==0){
+					sochan=dataArr[i];
+				}else{
+					sochan+=","+dataArr[i];
+				}
+			}else{
+				tongle+=dataArr[i];
+				if(sole.length==0){
+					sole=dataArr[i];
+				}else{
+					sole+=","+dataArr[i];
+				}
+			}
+		}
+		document.write("Trong mảng có các số chẵn là: "+sochan+"<br/>");
+		document.write("Tổng các số chẵn: "+tongchan+"<br/>");
+		document.write("Trong mảng có các số lẻ là: "+sole+"<br/>");
+		document.write("Tổng các số lẻ: "+tongle+"<br/>")
+	</script>
+</body>
+</html>

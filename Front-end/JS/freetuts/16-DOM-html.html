@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>DOM HTML</title>
+</head>
+<body>
+    <!-- THAY ĐỔI VÀ LẤY NỘI DUNG BÊN TRONG THẺ HTML -->
+    <!-- <script>
+        // lấy nội dung bên trong 1 thẻ HTML
+        var html = document.getElementById("content").innerHTML
+
+        // thay đổi nội dung 1 thẻ HTML
+        var html = document.getElementById("content").innerHTML = "<h1>Nội dung</h1>";
+    </script> -->
+
+
+    <!-- Trong ví dụ này ta sẽ viết chương trình thay đổi nội dung HTML của một thẻ DIV và lấy nội dung bên trong của một thẻ DIV -->
+    <!-- <script language="javascript">
+        // Hàm thiết lập nội dung cho thẻ div#content
+        function set_content()
+        {
+          document.getElementById("content").innerHTML = "<h1>Nội dung đã được thay đổi</h1>";  
+        }
+         
+        // Hàm lấy nội dung cho thẻ div#content
+        function get_content()
+        {
+          var html = document.getElementById("content").innerHTML;
+          alert("Nội dung cần lấy là: " + html);        
+        }
+      </script>
+      <div id="content">Nội dung của thẻ DIV</div>
+      <input type="button" value="Lấy nội dung" id="get_content" onclick="get_content()" />
+      <input type="button" value="Thay đổi nội dung" id="set_content" onclick="set_content()" />   -->
+
+
+
+
+
+
+
+
+
+      <!-- THAY ĐỔI VÀ LẤY GIÁ TRỊ THUỘC TÍNH HTML -->
+      <!-- <script>
+        //   thay đổi giá trị 1 thuộc tính
+          document.getElementById("element").attributeName = "new value";
+
+        //   lấy gtri 1 thuộc tính
+        var value = document.getElementById("element").attributeName;
+      </script> -->
+
+<!-- Xây dựng chương trình khi click vào một button thì chuyển nó thành textbox, và tiếp tục click vào textbox thì sẽ đổi thành button -->
+<script language="javascript">
+    function change()
+    {
+       // Lấy đối tượng
+       var object = document.getElementById("object");
+    
+       // lấy thuộc tính type
+       var type = object.type;
+   
+       // kiểm tra thuộc tính type và thay đổi
+      if (type == "button"){
+     
+         object.type = 'text';
+      }
+      else{
+          object.type = "button";
+      }
+    }
+  </script>
+  <input type="button" value="Button <-> Text" onclick="change()" id="object" />
+
+
+
+  <!-- Ví dụ bạn cần bổ sung một đoạn text vào trong một thẻ HTML thì sẽ không có hàm nào bổ trợ, tuy nhiên bạn có thể sử dụng một mẹo nhỏ thế này: -->
+
+<script>
+  var content_append = 'nội dung cần thêm vào';
+   
+   // Lấy đối tượng
+   var object = document.getElementById("object");
+    
+   // Lấy nội dung hiện tại
+   var content_current = object.innerHTML;
+    
+   // Bổ sung nội dung vào đối tượng
+   object.innerHTML = content_current + content_append;
+</script>
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>BOM Navigator</title>
+</head>
+<body>
+<script>
+// Để kiểm tra trình duyệt có bật Cookie hay không thì ta sử dụng thuộc tính navigator.cookieEnabled.
+if (window.cookieEnabled){
+    alert("Có bật Cookie - freetuts.net");
+}
+else{
+    alert("Cookie đã bị tắt");
+}
+
+
+// Để kiểm tra tên trình duyệt thì ta dùng thuộc tính navigator.appName và thuộc tính navigator.appCodeName dùng để kiểm tra tên mã code của trình duyệt.
+document.write("App Name: " + window.navigator.appName + "<br/>");
+document.write("Code Name: " + window.navigator.appCodeName + "<br/>");
+
+
+// Để kiểm tra Engine của trình duyệt ta sử dụng thuộc tính navigator.product.
+document.write("Engine: " + navigator.product + "<br/>");
+
+// Để kiểm tra Version của trình duyệt ta sử dụng thuộc tính navigator.appVersion hoặc navigator.userAgent.
+document.write("Cách 1: " + navigator.appVersion + "<br/>");
+document.write("Cách 2: " + navigator.userAgent + "<br/>");
+
+
+// xem hệ điều hành mà người dùng đang sử dụng bằng cách sử dụng thuộc tính navigator.platform.
+document.write("Hệ điều hành: " + navigator.platform + "<br/>");
+
+
+// Mỗi trình duyệt có thể lựa chọn ngôn ngữ khác nhau và ta có thể kiểm tra bằng phương thức navigator.language.
+document.write("Ngôn ngữ Browser: " + navigator.language);
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Table cơ bản</title>
+  </head>
+  <body>
+    <!-- 
+    Table (bảng) là một trong các thành phần được sử dụng rộng rãi trong trang. Để có được một bảng theo phong cách của Bootstrap khá đơn giản, bạn chỉ cần áp dụng lớp .table cho các thẻ (tag) <table>, và một vài lớp bổ xung để tạo ra một bảng theo ý muốn.
+    Áp dụng lớp .table cho <table> bạn sẽ có một bảng cơ bản nhất theo phong cách của Bootstrap.
+    Lớp .table thiết lập chiều rộng 100% và mầu nền trong suốt (transparent) cho bảng, thiết lập padding cho các ô (cell), ...
+ -->
+    <div class="container">
+      <h2>Basic Bootstrap Table</h2>
+      <table class="table table-success">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Language</th>
+            <th>Percent</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Java</td>
+            <td>14.21%</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>C</td>
+            <td>11.03%</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>C++</td>
+            <td>5.60%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 
+        Lớp .table áp dụng mầu nền trong suốt (transparent) cho bảng, tuy nhiên nếu bạn muốn có mầu nền khác có thể sử dụng một vài lớp có sẵn sau:
+            .table-primary
+            .table-secondary
+            .table-success
+            .table-danger
+            .table-warning
+            .table-info
+            .table-light
+            .table-dark
+            .table-muted
+            .table-white
+     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

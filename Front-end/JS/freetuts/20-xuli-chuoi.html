@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Xử lí chuỗi string</title>
+</head>
+<body>
+    <!-- TÌM KIẾM CHUỖI CON -->
+
+    <!-- indexOf()
+
+    Để tìm kiếm chuỗi con thì ta sử dụng hàm String.indexOf(str), trong đó str là chuỗi con và String là chuỗi cha. Hàm này sẽ trả kết quả về kết quả là vị trí xuât hiện đầu tiên của chuỗi (bắt đầu là vị trí 0), nếu không tìm thấy chuỗi con thì nó sẽ trả về -1.
+    <br/>
+    <script>
+        var string = "Chào mừng bạn đến với freetuts.net";
+document.write("Vị trí xuất hiện chuỗi freetuts.net là: " + string.indexOf("freetuts.net"));
+    </script> -->
+
+
+
+
+<!-- lastIndexOf()
+
+Trường hợp nếu chuỗi con xuất hiện nhiều lần trong chuỗi cha thì kết quả cũng trả về vị trí xuất hiện của chuỗi con đầu tiên. Vậy làm thế nào để lấy vị trí của chuỗi con cuối cùng trong chuỗi cha? Ta sẽ sử dụng hàm String.lastIndexOf(str), hàm này sẽ trả về vị trí xuất hiện của chuỗi con cuối cùng và trả về -1 nếu không tìm thấy.
+<br/>
+<script>
+    var string = "Website freetuts.net - học lập trình miễn phí tại freetuts.net";
+document.write("Vị trí xuất hiện chuỗi freetuts.net là: " + string.lastIndexOf("freetuts.net"));
+</script> -->
+
+
+
+
+
+<!-- search()
+
+Ngoài hai hàm trên bạn có thể sử dụng hàm string.search(str) để tìm kiếm, tác dụng của nó cũng giống như hàm string.indexOf(str).
+<br/>
+<script>
+var string = "Chào mừng bạn đến với freetuts.net";
+document.write("Vị trí xuất hiện chuỗi freetuts.net là: " + string.search("freetuts.net"));
+</script> -->
+
+
+
+
+CẮT CHUỖI CON
+
+<!-- slice()
+
+Hàm slide có hai tham số truyền vào:
+start: vị trí bắt đầu
+end: vị trí kết thúc
+<br/>
+    <script>
+        var string = "Welcome to freetuts.net";
+    document.write("Chuỗi cần lấy là: " + string.slice(11, 23));
+    </script>
+Nếu tham số truyền vào là số âm thì nó sẽ tính ngược lại, nghĩa là nó sẽ đếm từ cuối lên. <br/>
+    <script>
+        var string = "Welcome to freetuts.net";
+document.write("Chuỗi cần lấy là: " + string.slice(-12, 23));
+    </script> -->
+
+
+
+
+
+    <!-- substring()
+
+Hàm substring() có cách sử dụng giống với hàm slice(), tuy nhiên tham số truyền vào hàm substring() phải luôn luôn lớn hơn 0 <br/>
+    <script>
+        var string = "Welcome to freetuts.net";
+document.write("Chuỗi cần lấy là: " + string.substring(11, 23));
+
+    </script> -->
+
+
+
+
+
+
+<!-- substr()
+
+Hàm substr() có hai tham số là start và length, trong đó start là vị trí bắt đầu và length là số ký tự muốn lấy bắt đầu từ vị trí start. Nếu bạn truyền tham số start là số âm thì nó sẽ tính từ cuối trở lên, còn tham số length phải luôn luôn là số dương. <br/>
+ <script>
+     var string = "Welcome to freetuts.net";
+document.write("Chuỗi cần lấy là: " + string.substr(11, 12));
+ </script> -->
+
+
+
+
+
+<!-- TÌM KIẾM VÀ LẶP CHUỖI -->
+
+<!-- replace(str_find, str_replace)
+
+rong đó: 
+str_find là chuỗi cần tìm 
+str_replace là chuỗi sẽ được thay thế chuỗi str_find <br/>
+ <script>
+     var string = "Welcome to freetuts.net";
+document.write(string.replace("freetuts.net", "freetuts.com"));
+ </script> -->
+
+
+
+ <!-- UPPER CASE & LOWER CASE -->
+
+ <!-- toUpperCase() Để chuyển chuỗi thành chữ hoa
+ toLowerCase() Để chuyển thành chữ thường <br/>
+ <script>
+     var string = "Welcome to freetuts.net";
+document.write(string.toUpperCase() + "<br/>");
+document.write(string.toLowerCase());
+ </script> -->
+
+
+
+
+
+
+<!-- LẤY THÊM CHUỖI -->
+
+<!-- Để nối thêm chuỗi thông thường ta dùng toán tử +, ngoài ra bạn có thể dùng hàm concat() để thực hiện nối chuỗi. <br/>
+    <script>
+        var string = "Welcome " + "to" + " freetuts.net";
+document.write(string + "<br/>");
+ 
+// hoặc
+var string2 = "WELCOM ";
+string2 = string2.concat("to ", "FREETUTS.net");
+document.write(string2 + "<br/>");
+    </script> -->
+
+
+
+
+    <!-- TÌM KÝ TỰ, TÌM MÃ ASCII CỦA KÝ TỰ -->
+
+    <!-- Để xem ký tự của một vị trí nào đó thì dùng hàm charAt(), còn xem mã ASCII thì dùng hàm charCodeAt(). Cả hai hàm này đều có tham số truyền vào là vị trí muốn xem. <br/>
+    <script>
+        var string = "Welcome freetuts.net";
+ 
+ document.write(string.charAt(1) + "<br/>");
+ document.write(string.charCodeAt(1) + "<br/>");
+    </script> -->
+
+
+
+
+<!-- STRING TO ARRAY -->
+
+<!-- Để chuyển một chuỗi sang mảng thì ta sử dụng hàm split() với tham số truyền vào là ký tự ngăn cách giữa các phần tử. <br/>
+    <script>
+        string = "Welcome freetuts.net";
+ 
+ // Tạo thành mảng với mỗi phần tử ngăn bởi khoảng trắng
+ // kết quả là mảng có hai phần tử gồm: welcome và feetuts.net
+ document.write(string.split(" "));
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

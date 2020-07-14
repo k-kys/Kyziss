@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Navbar & Form</title>
+  </head>
+  <body>
+    <h2>6- Navbar & Form</h2>
+    <!-- 
+        Form cũng có thể xuất hiện trên một Navbar, thông dụng nhất là Form tìm kiếm, nó cho phép người dùng nhập vào từ khóa để tìm kiếm một nội dung trong website.
+     -->
+
+    <!-- Navbar-nav with FORM -->
+    <h5>Navbar Form riêng</h5>
+    <ul class="navbar-nav">
+      <form class="form-inline" action="/somepage">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" />
+        <button class="btn btn-success" type="submit">Search</button>
+      </form>
+    </ul>
+    <hr />
+    <h5>Navbar kết hợp Form</h5>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary rounded">
+      <a class="navbar-brand" href="#">o7planning</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link">Java</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">C/C++</a>
+        </li>
+      </ul>
+      <!-- Navbar-nav with FORM -->
+      <ul class="navbar-nav ml-auto">
+        <form class="form-inline" action="/somepage">
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            placeholder="Search"
+          />
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </ul>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

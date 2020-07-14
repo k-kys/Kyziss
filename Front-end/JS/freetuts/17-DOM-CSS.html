@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>DOM CSS</title>
+</head>
+<body>
+    <!-- THAY ĐỔI CSS -->
+<!-- Style bản chất nó cũng là một thuộc tính của các thẻ HTML nhưng bạn không thể sử dụng DOM HTML để thiết lập hay xóa bỏ CSS được mà phải thông qua một đối tượng biệt khác đó là style.
+
+Đối tượng style này sẽ chứa tất cả các thuộc tính của CSS và chúng ta sẽ dễ dàng thao tác với chúng bằng cú pháp riêng, và như thường lệ chúng ta có hai thao tác chính đó là thiết lập CSS và lấy giá trị CSS hiện tại. -->
+    <!-- <script>
+        // Cú pháp thiết lập CSS bằng Javascript:
+        document.getElementById("object").style.cssName = 'something';
+
+        // Cú pháp lấy giá trị CSS bằng Javascript:
+        var value = document.getElementById("object").style.cssName;
+    </script> -->
+
+<!-- Trường hợp thuộc tính có dấu gạch ngang như: font-size, line-height, margin-bottom thì thuộc tính đó trong style sẽ có tên là fontSize, lineHeight, marginBottom ,nghĩa là sẽ bỏ đi dấu gạch ngang và viết hoa ký tự đầu tiên của chữ thứ hai. -->
+    <!-- <script>
+        document.getElementById("object").style.fontSize = 'something';
+        document.getElementById("object").style.lineHeight = 'something';
+        document.getElementById("object").style.marginBottom = 'something';<br />
+<br />
+    </script> -->
+
+
+    <!-- THAY ĐỔI CSS -->
+    <!-- Viết một chương trình gồm 4 buttons và 1 thẻ div, khi click vào từng button thì sẽ thiết lập màu sắc, background, chiều cao, font size của thẻ div.
+    
+    Chúng ta phải sử dụng sự kiện trong javascript đó là onclick, mỗi khi click vào mỗi button sẽ giải quyết một vấn đề của bài toán.
+
+Các bước thực hiện:
+
+Tạo 4 functions thực hiện 4 nhiệm vụ như đề bài yêu cầu
+Gán mỗi function vào sự kiện onclick của mỗi button. -->
+<!-- <script language="javascript">
+    function change_background()
+    {
+       document.getElementById("message").style.background = 'green';
+    }
+
+    function change_color()
+    {
+       document.getElementById("message").style.color = 'blue';
+    }
+
+    function change_height()
+    {
+       document.getElementById("message").style.height = '300px';
+    }
+
+    function change_font_size()
+    {
+       document.getElementById("message").style.fontSize = '80px';
+    }
+</script>
+<div id="message">
+  Chào mừng các bạn đến với freetuts.net
+</div>
+<input type="button" value="Change backgroud" onclick="change_background()"/>
+<input type="button" value="Change color" onclick="change_color()"/>
+<input type="button" value="Change height" onclick="change_height()"/>
+<input type="button" value="Change fontsize" onclick="change_font_size()"/> -->
+
+
+
+
+<!-- Viết chương trình đăng nhập và validate thông tin username, password. Nếu người dùng không nhập username hoặc mật khẩu thì hiển thị thông báo message trong một thẻ div và chữ màu đỏ, ngược lại thì thông báo validate thành công và chữ màu xanh -->
+
+<!--    <script language="javascript">
+          function validate()
+          {
+            // Lấy giá trị input
+             var username = document.getElementById("username").value;
+             var password = document.getElementById("password").value;
+             
+            // Lấy đối tượng message
+            var message = document.getElementById("message");
+             
+            // Validate
+            if (username == "" || password == ""){
+                message.innerHTML = "Bạn chưa nhập đầy đủ thông tin!";
+                message.style.color = "red";
+            }
+             
+            else{
+                message.innerHTML = "Chúc mừng ban, validate thành công!";
+                message.style.color = "blue";
+            }
+             
+          }
+        </script>
+        Username: <input type="text" value="" id="username" /> <br/>
+        Password: <input type="password" value="" id="password" /> <br/>
+        <div id="message"></div>
+        <input type="button" value="Login" onclick="validate()"/> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

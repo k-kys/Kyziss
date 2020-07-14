@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>DOM Element</title>
+</head>
+<body>
+
+    <!-- Tìm thẻ HTML theo ID -->
+    <!-- <script>
+        // lấy thẻ input
+        var element = document.getElementById('idname');
+
+        // lấy gtri của thẻ input
+        document.write(element.value);
+    </script> -->
+
+
+
+
+    <!-- Tìm thẻ HTML theo tên của thẻ HTML -->
+    <!-- <script>
+        // Lấy thẻ input
+        var element = document.getElementsByTagName('input');
+        
+        // Lấy giá trị của thẻ input
+        document.write(element[0].value); 
+
+        Trong ví dụ này có sự khác biệt đó là đoạn code element[0].value. Tại sao lại như vậy? Như bạn biết trong một trang web có thể có nhiều thẻ HTML giống nhau (ví dụ có hai thẻ div) nên hàm getElementsByTagName() sẽ trả về một mảng các object chứ không phải là một object nữa, chính vì vậy ta sẽ lấy input thứ nhất nên truyền số 0 vào.
+    </script> -->
+
+
+
+
+
+    <!-- Tìm thẻ HTML theo tên class -->
+    <!-- <script>
+        // Lấy thẻ input
+        var element = document.getElementsByClassName('website');
+        
+        // Lấy giá trị của thẻ input
+        document.write(element[0].value);
+
+        // Tương tự như tìm theo tên thẻ HTML thì tìm theo tên class sẽ trả về một mảng các object nên bạn sẽ phải sử dụng cú pháp truy xuất mảng để chọn đúng đối tượng muốn lấy.
+    </script> -->
+
+
+
+
+
+
+
+<!-- Tìm thẻ HTML theo cú pháp của Selector CSS -->
+<!-- Khi chọn các thẻ HTML theo class thường sẽ trả về hàng loạt các kết quả, như vậy đôi khi sẽ có những kết quả mà ta không mong đợi. Chính vì vậy javascript DOM có một phương thức kết hợp với CSS Selector để truy vấn có độ chính xác cao hơn. -->
+    <input type="text" value="thẻ không cần lấy" class="website"/>
+    <div>
+        <input type="text" value="Thẻ Cần Lấy" class="website"/>
+        <input type="text" value="thẻ không cần lấy"/>
+    </div>
+    <!-- Trong CSS để chọn thẻ input nằm trong thẻ div và có class="website" thì cú pháp là:     div input.website -->
+    <script>
+        var element = document.querySelectorAll("div input.website");
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

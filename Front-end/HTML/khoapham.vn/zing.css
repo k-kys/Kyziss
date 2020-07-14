@@ -1,0 +1,102 @@
+*{
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'Quicksand', sans-serif;
+}
+/* reset css và chọn font */
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+}
+/*đặt kích thước cho html và body là 1 màn hình
+đặt html rồi mới đặt được body */
+p{
+	color: white;
+}
+/* đặt màu của thẻ p là màu trắng */
+.khoiTo{
+	background-image: url("http://online.khoapham.vn/online/images/pexels-photo.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+/* đặt hình nền và kích thước cho khoiTo là 1 màn hình */
+.manHinhDen{
+	background-color: #00000059;
+	width: 100%;
+	height: 100%;
+	display: flex;
+		justify-content: center;
+		align-items: center;
+}
+.khoiDen{
+	background-color: #00000059;
+	width: 60%;
+	height: 50%;
+}
+/* đặt màu background #00000059 lên hình nền và đặt flex box chia các layout bên trong khối đen */
+.text{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+h2{
+	color: white;
+	font-size: 40px;
+	font-weight: lighter;
+}
+#txt1{
+	color: white;
+	text-align: center;
+	line-height: 25px;
+	margin: 25px 0px;
+}
+.timKiem{
+	width: 100%;
+	text-align: center;
+}
+.timKiem input{
+	width: 80%;
+	height: 50px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.timKiem i{
+	background-color: #0D7CC9;
+	color: white;
+	font-size: 20px;
+	padding: 15px;
+	position: relative;
+	top: 2px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.gioiThieu{
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	top: 30px;
+	width: 100%;
+	justify-content: space-around;
+}
+._1khoi{
+	width: 175px;
+	height: 93px;
+	justify-content: space-between;
+}
+._1khoi i{
+	color: white;
+	float: left;
+	font-size: 26px;
+	height: 90px;
+	margin-right: 20px;
+}
+._1khoi p{
+	font-size: 15px;
+}

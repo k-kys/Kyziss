@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Array</title>
+</head>
+<body>
+<script>
+    // // 1. khai báo array
+    // var name_array = new Array();
+    // // Hoặc
+    // var name_array = new Array(1,2,3);
+
+    // var name_array = [];
+    // // Hoặc
+    // var name_array = [1,2,3];
+
+
+
+    // 2. Để truy xuất đến phần tử của một mảng chúng ta dùng cú pháp tenmang[vitri].
+    // var t = new Array(1,2,3);
+    // alert(t[0]); // kết quả là 1
+    // alert(t[1]); // kết quả là 2
+    // alert(t[2]); // kết quả là 3
+
+
+
+
+    // 3. In mảng ra trình duyệt và console
+
+    // array.join() : Để hiển thị các phần tử ra ngoài trình duyệt chúng ta sẽ sử dụng hàm array.join()
+    // var t = new Array(1,2,3);
+    // document.write(t.join()); // kết quả 1,2,3
+    // document.write(t.join('-')); // kết quả 1-2-3
+    // Như vậy hàm join này được tích hợp vào đối tượng mảng trong javascript và nó có một tham số truyền vào, nếu ta không truyền gì vào thì mặc định nó lấy dấu phẩy để ngăn giữa các giá trị khi in lên trình duyệt.
+
+
+    // console.log() :  
+    // Ngoài ra chúng ta có thêm một hàm rất hay dùng để debug đó là console.log().  Các bạn hãy cài đặt Firebug trên firefox hoặc dùng chế độ "kiểm tra phần tử" có sẵn trên trình duyệt (chrome tương tự), sau đó chuyển vào mục console. Nêu bạn code bị lỗi cú pháp hoặc một lỗi bất kì liên quan đến javascript thì nó sẽ hiển thị ở ô này nên bạn phải dùng nó để kiểm tra nếu viết mã javascript mà không thấy hoạt động nhé. Chữ đỏ là lỗi, chữ vàng là cảnh báo.
+    // var t = new Array(1,2,3);
+    // console.log(t);
+
+
+
+
+
+
+    // 4. Sử dụng vòng lặp để lặp mảng trong javascript
+
+    // Để đếm tổng số phần tử của một mảng chúng ta sẽ dùng thuộc tính length của nó. Ví dụ:
+// var t = new Array(1,2,3);
+// alert(t.length);
+
+
+// Để lặp mảng với vòng lặp for thì chúng ta phải dùng thuộc tính length như trên để đếm tổng số phần tử, sau đó ở mỗi vòng lặp chúng ta sử dụng cú pháp truy xuất đến phần tử của mảng ở phần 2 để xử lý.
+// var name_array = [1,2,3];
+// for (var i = 0; i < name_array.length; i++){
+//     document.write(name_array[i]);
+// }
+
+
+// Tương tự để lặp với vòng lặp while  chúng ta sẽ khai báo một biến index để lưu vị trí đang lặp. Ví dụ:
+// var name_array = [1,2,3];
+// var index = 0;
+// while (index < name_array.length){
+//     document.write(name_array[index]);
+//     index++;
+// }
+
+
+
+
+
+
+
+
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

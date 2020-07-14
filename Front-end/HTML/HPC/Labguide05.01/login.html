@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login Javascript</title>
+	<script language="Javascript">
+		function Login()
+		{
+			
+				if(myform.name.value=="") {
+					alert("Vui lòng nhập tài khoản");
+					myform.name.focus();
+					return false;
+				}
+				if(myform.Password.value=="") {
+					alert("Vui lòng nhập mật khẩu");
+					myform.Password.focus();
+					return false;
+				}
+				else {
+					alert("Welcome to Javascript, bạn được chuyển hướng đến khuong2k.blogspot.com")
+				location.replace("https://khuong2k.blogspot.com");
+				}
+			
+		}
+	</script>
+</head>
+<body>
+	<h1>Login Infomation</h1>
+	<hr>
+	<form name="myform">
+		<label for="user"><b>Tên người dùng:</b><br>
+		<input name="name" placeholder="Username" type="text" size="35"></label>
+		<p>
+		<label for="password"><b>Mật khẩu:</b><br>
+		<input name="Password" placeholder="Password" type="password" size="35"></label>
+		</p>
+		<p><input type="checkbox">Remember set</p>
+		
+		<input type="button" value="Login" onclick="Login()">
+		<input type="reset" value="reset">
+	</form>
+</body>
+</html>

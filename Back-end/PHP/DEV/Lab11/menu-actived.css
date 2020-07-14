@@ -1,0 +1,30 @@
+#main{
+	height: 35px;
+	background: #ccc;
+	margin: 0 auto;
+	width: 50%;
+}
+
+#main ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#main ul li{
+	float: left;
+	border-right: solid 1px #fff;
+}
+
+#main ul li a{
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding: 8px 15px;
+}
+
+.selected,
+#main ul li a:hover{
+	background: #792b90;
+	color: #fff !important;
+}

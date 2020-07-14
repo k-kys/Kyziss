@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>DOM Nodes</title>
+</head>
+<body>
+    <!-- 1. DOM Node - document.createElement()
+    Khi bạn sử dụng DOM Element để truy vấn tới một đối tượng HTML nào đó thì kết quả nó sẽ trả về một object và object đó ta gọi là DOM Nodes.
+        <script>
+            var node = document.getElementById("some-id");
+        </script>
+    Với cách này bắt buộc phải tồn tại một đối tượng HTML đang hiển thị trên website thì mới khởi tạo thành công. Giả sử nếu bạn muốn tạo một Node mới hoàn toàn v không liên quan tới những thẻ HTML đang hiển thị trên website thì làm thế nào? Rất đơn giản chúng ta sẽ sử dụng phương thức document.createElement() với tham số truyền vào là tên của thẻ HTML cần tạo.
+        <script>
+            // tạo thẻ <p>
+            var p = document.createElement("p");
+        </script>
+    Sau khi khởi tạo xong bạn hoàn toàn có thể sử dụng các phương thức, thuộc tính của DOM HTML, DOM CSS.
+        <script>
+            // thêm nội dung html vào thẻ
+            p.innerHTML = "Học DOM Nodes tại freetuts.net"
+        </script>
+    Để thêm Node này vào trang web thì chúng ta sử dụng phương thức appendChild (sẽ học ở bên dưới). Giả sử tôi thêm vào thẻ body thì làm như sau:
+        <script>
+            // đưa thẻ <p> vào trong thẻ <body>
+            document.getElementsByTagName('body')[0].appendChild(p);
+        </script> -->
+
+
+
+    <!-- 2. DOM Node - document.createTextNode()
+    Text node là một node đặc biệt, nó không phải là một thẻ HTML thông thường mà chỉ là một chuỗi (string) nên thông thường chúng ta sử dụng nó để thay thế cách gán thông thường node.innerHTML.
+        <script language="javascript">
+           
+            // Tạo mới một thẻ p
+            var p = document.createElement("p");
+            
+            // Tạo text node
+            var text = document.createTextNode("Học DOM Nodes tại freetuts.net");
+            
+            // Thêm nội dung HTML vào thẻ p
+            p.appendChild(text);
+            
+            // Đưa thẻ P vào trong thẻ body
+            document.getElementsByTagName('body')[0].appendChild(p);
+            
+        </script> -->
+
+
+
+    <!-- 3. DOM Node - các phương thức khác
+    appendChild() : Dùng để thêm (bổ sung) vào vị trí cuối cùng của đối tượng một thẻ HTML nào đó.
+    
+    <div id="TOP">
+        Xin chào các bạn!  
+    </div>
+   
+    <input type="button" value="Append" id="btn-append"/>
+   
+    <script language="javascript">
+      // Lấy button
+      var button = document.getElementById("btn-append");
+       
+      // Thêm sự kiện click cho button
+      button.addEventListener("click", function(){
+        // Tạo mới một thẻ h1
+        var p = document.createElement("p");
+
+        // Thêm nội dung HTML vào thẻ h1
+        p.innerHTML = "Học DOM Nodes tại freetuts.net"
+
+        // Đưa thẻ h1 vào trong thẻ div có id=TOP
+        document.getElementById('TOP').appendChild(p);
+      });
+    </script> -->
+
+    <!-- insertBefore() : Được dùng để thêm một Node vào đằng trước một node con nào đó. Phương thức này có hai tham số truyền vào insertBefore(node_insert, node_child), trong đó:
+
+    node_insert là node bạn muốn thêm vào
+    node_child là node con mà bạn muốn thêm vào đằng trước nó.
+
+    <div id="content">
+        <h5>Xin chào các bạn</h5>          
+        <h5>chúc vui vẻ khi học bài</h5>
+    </div>
+   
+    <input type="button" value="View" id="btn-view"/>
+   
+    <script language="javascript">
+      // Lấy button
+      var button = document.getElementById("btn-view");
+       
+      // Thêm sự kiện click cho button
+      button.addEventListener("click", function(){
+        // Tạo mới một thẻ h1
+        var h1 = document.createElement("h1");
+
+        // Thêm nội dung HTML vào thẻ h1
+        h1.innerHTML = "Chào mừng bạn đến với freetuts.net"
+
+        // Lấy thẻ ngoài cùng
+        var element = document.getElementById("content");
+         
+        // Lấy thẻ cần isertBefore
+        var element_child = document.getElementsByTagName("h5")[1];
+         
+        // Insert Before
+        element.insertBefore(h1, element_child);
+      });
+    </script> -->
+
+<!-- 
+    removeChild() : Được dùng để xóa một node con ra khỏi node hiện tại.
+
+    <div id="content">
+        <h5>chúc vui vẻ khi học bài</h5>
+    </div>
+   
+    <input type="button" value="Remove" id="btn-remove"/>
+   
+    <script language="javascript">
+      // Lấy button
+      var button = document.getElementById("btn-remove");
+       
+      // Thêm sự kiện click cho button
+      button.addEventListener("click", function(){
+         
+        // Lấy thẻ cần remove
+        var need_remove = document.getElementsByTagName("h5")[0];
+         
+        // Remove
+        document.getElementById("content").removeChild(need_remove);
+      });
+    </script> -->
+
+
+
+
+    <!-- replaceChild() : Dùng để replace (thay thế) một node con nào đó bằng một node khác mới hoàn toàn.
+
+    <div id="content">
+        <h5>chúc vui vẻ khi học bài</h5>
+    </div>
+   
+    <input type="button" value="Replace" id="btn-replace"/>
+   
+    <script language="javascript">
+      // Lấy button
+      var button = document.getElementById("btn-replace");
+       
+      // Thêm sự kiện click cho button
+      button.addEventListener("click", function(){
+         
+        // Tạo mới một thẻ
+        var h2 = document.createElement("h2");
+        h2.innerHTML = "Xin chào!";
+             
+        // Lấy thẻ cần replace
+        var replace = document.getElementsByTagName("h5")[0];
+         
+        // Replace
+        document.getElementById("content").replaceChild(h2, replace);
+      });
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

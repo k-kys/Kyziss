@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Return true false</title>
+</head>
+<body>
+
+    <!-- Trong bài tập này ta sẽ sử dụng sự kiện onclick của nút submit, đồng thời sử dụng DOM để lấy các giá trị trong form.
+
+    Yêu cầu của bài tập như sau:
+
+Tên đăng nhập không được để trống
+Mật khẩu không được để trống
+Mật khẩu nhập lại phải giống với mật khẩu đã nhập ở trên
+
+Hướng giải:
+
+Tạo một javascript function validate() 
+Sử dụng return validate() trong sự kiện onclick của button Register
+Trong hàm validate() sử dụng DOM để lấy giá trị các ô input, sau đó kiểm tra các giá trị và return về true/false -->
+<script>
+    function validate() {
+        // lấy gtri
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var re_password = document.getElementById("re_password").value;
+
+        // ktra các gtri
+        if (username == "") {
+            alert("Bạn chưa nhập tên đăng nhập");
+            return false;
+        }
+        if (password == "") {
+            alert("Bạn chưa nhập mật khẩu");
+            return false;
+        }
+        if (password != re_password) {
+            alert("Nhập lại mật khẩu không đúng");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<form action="" method="POST" role="form">
+    <legend>Form register</legend>
+
+    <div class="form-group">
+        <label for="">Username</label>
+        <input type="text" class="form-control" name="username" id="username" placeholder="Input field">
+    </div>
+
+    <div class="form-group">
+        <label for="">Password</label>
+        <input type="text" class="form-control" name="password" id="password" placeholder="Input field">
+    </div>
+
+    <div class="form-group">
+        <label for="">Re password</label>
+        <input type="text" class="form-control" name="re_password" id="re_password" placeholder="Input field">
+    </div>
+
+    <button type="submit" class="btn btn-primary" onclick="return validate()">Register</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

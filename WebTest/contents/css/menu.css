@@ -1,0 +1,90 @@
+/* MENU NGANG */
+nav#navTop{
+	width: 960px;/*thiết lập chiều rộng cho menu*/
+	margin: 0 auto;/*đặt menu luôn hiển thị giữa màn hình*/
+	background: #ccc;/*thiết lập màu nền cho menu*/
+	height: 40px;/*thiết lập chiều cao cho menu*/
+}
+nav#navTop ul{/*thiết lập cho tất cả thẻ ul nằm trong navTop*/
+	list-style: none;/*bỏ style mặc định của ul li*/
+	padding: 0;/*thiết lập padding về 0*/
+	margin: 0;/*thiết lập mardin về 0*/
+	position: relative;/*thiết lập hiển thị cho thẻ li cấp cha*/
+}
+nav#navTop ul li{
+	float: left;/*hiển thị li thẳng hàng theo chiều trái phải*/
+	border-right: solid 1px #fff;/*đặt border-right cho thẻ li*/
+}
+nav#navTop ul li a{
+	text-decoration: none;/*bỏ gạch chân thẻ <a>*/
+	display: block;/*thiết lập thẻ <a> hiển thị theo khối block*/
+	padding: 10px 30px;/*thiết lập padding trên dưới trái phải cho thẻ <a>*/
+}
+/*thiết lập thẻ a được hover hoặc nhận class là selected*/
+.selected1,
+nav#navTop ul li a:hover{
+	background: red;/*đặt mầu nền cho thẻ a*/
+	color: #fff;/*đặt màu chữ cho thẻ a*/
+}
+/*viết css cho menu cấp 2*/
+nav#navTop ul li>ul{/*thiết lập cho các thẻ ul là con của li*/
+	position: absolute;/*thiết lập hiển thị cấp 2 cho ul*/
+	width: 159px;/*thiết lập chiều rộng cho ul cấp 2*/
+	background: #666;
+	visibility: hidden;/*mặc định ẩn khi chưa di chuột vào*/
+}
+nav#navTop ul li>ul li{
+	border-bottom: solid 1px #fff;/*đường viền cho menu cấp 2*/
+}
+nav#navTop ul li:hover>ul{
+	visibility: visible;/*khi di chuột vào thẻ li,toàn bộ ul bên trong hiển thị*/
+}
+/*menu cấp N*/
+nav#navTop ul li>ul li>ul{
+	/*menu cấp N lệch sang trái bằng kích thước menu cấp cha*/
+	margin-left: 159px;
+	margin-top: -40px;
+	/*nếu muốn thêm 1 cấp menu nữa, chỉ cần tạo ra cấu trúc ul li nằm trong thẻ li cấp cha*/
+}
+
+/* MENU DỌC */
+
+nav#mainNav{
+	width: 200px;/*chiều rộng nav*/
+	background: #ccc;
+}
+nav#mainNav ul{
+	list-style: none;/*bỏ style mặc định của ul li*/
+	padding: 0;/*bỏ padding của ul*/
+	margin: 0;/*bỏ margin của ul*/
+}
+nav#mainNav ul li{
+	border-bottom: solid 1px #fff;/*thiết lập đường kẻ cho li*/
+	position: relative;/*hiển thị vị trí tương đối*/
+}
+nav#mainNav ul li a{
+	text-decoration: none;/*bỏ gạch chân thẻ a*/
+	display: block;/*hiển thị khối cho thẻ a*/
+	width: 85%;/*đặt chiều rộng a bằng 85% so với nav*/
+	padding: 10px 15px;/*khoảng cách cho nội dung thẻ a*/
+}
+.selected2,/*thiết lập class cho thẻ a*/
+nav#mainNav ul li a:hover{/*di chuột vào thẻ a*/
+	background: red;
+	color: #fff;
+}
+/*menu cấp 2*/
+nav#mainNav ul li>ul{
+	position: absolute;/*hiển thị tuyệt đối theo menu cha*/
+	margin-left: 200px;/*hiển thị sang trái 200px*/ 
+	width: 200px; /*độ rộng menu cấp 2*/
+	background: #666;
+	top: 0px;/*hiển thị top0*/
+	visibility: hidden;/*mặc định ẩn khi chưa di chuột vào*/
+}
+nav#mainNav ul li>ul li{
+	border-left: solid 1px #fff;
+}
+nav#mainNav ul li:hover>ul{
+	visibility: visible;/*khi di chuột vào thẻ li,toàn bộ ul bên trong hiển thị*/
+}

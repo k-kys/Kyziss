@@ -1,0 +1,11 @@
+đề chẵn 02
+	1. Thiết kế CSDL [baithi_hpcit01_02] (2đ)
+		- Tạo Customer(cusID,cusName,cusAdd,cusPhone)
+		- cusID là PK
+	2. Xây dựng ứng dụng php (8đ)
+		a. Thiết kê trang list-customer.php
+			- Hiển thị thông tin khách hàng theo dạng bảng
+			- Thiêt kế nút chức năng (Thêm mới) -> chuyển đến add-customer.php
+		b. Thiết kế trang add-customer.php
+			- Thực hiện thêm mới thông tin đăng kí của khách hàng
+			- Sau khi thêm mới thành công -> chuyển về trang list-customer.php

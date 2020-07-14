@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="sendmail.css">
+	<script>
+		if(Document.form2.email.value=="admin@devmaster.vn")
+		{
+			if(Document.form2.password.value=="123456@")
+			{
+
+				Document.form1.NguoiGui.value=="admin@devmaster.vn";
+			}
+		}
+		
+
+		function check()
+		{
+			if(Document.form1.NguoiGui.value=="")
+			{
+				alert("Vui lòng nhập tên người gửi");
+				Document.form1.NguoiGui.focus();
+				return false;
+			}
+			if(Document.form1.NguoiNhan.value=="")
+			{
+				alert("Vui lòng nhập tên người nhận");
+				Document.form1.NguoiNhan.focus();
+				return false;
+			}
+			if(Document.form1.TieuDe.value=="")
+			{
+				alert("Vui lòng nhập tiêu đề");
+				Document.form1.TieuDe.focus();
+				return false;
+			}
+			if(Document.form1.noiDung.value=="")
+			{
+				alert("Vui lòng nhập nội dung");
+				Document.form1.noiDung.focus();
+				return false;
+			}
+			if(Document.form1.Ngay.value=="")
+			{
+				alert("Vui lòng chọn ngày giải quyết");
+				Document.form1.Ngay.focus();
+				return false;
+			}
+			if(Document.form1.capDo.value=="")
+			{
+				alert("Vui lòng chọn cấp độ");
+				Document.form1.capDo.focus();
+				return false;
+			}
+			return true;
+		}
+		function login()
+		{
+			if(Document.form2.password.value=="")
+			{
+				Alert("Vui lòng nhập password của bạn");
+				Document.form2.password.focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<h1>Welcome to DEVMASTER.vn</h1>
+	</div>
+	<table>
+	<tr>
+		<td>
+		<div>
+		<h2>CHƯƠNG TRÌNH GỬI THƯ ĐIỆN TỬ</h2></div>
+		
+	
+	
+		<form action="" name="form1" method="post" onsubmit="return check();">
+		<b>Người gửi:</b>
+		<input type="text" name="NguoiGui" size="20"> <b>(*)</b><br>
+
+		<b>Người nhận:</b>
+		<input type="text" name="NguoiNhan" size="20"> <b>(*)</b><br>
+
+		<b>Tiêu đề thư:</b>
+		<input type="text" name="TieuDe" size="30"> <b>(*)</b><br>
+
+		<b>Nội dung thư:</b>
+		<textarea name="noiDung" cols="30" rows="5"></textarea><b>(*)</b><br>
+
+		<b>Ngày giải quyết:</b>
+		<input type="date" name="Ngay" placeholder="mm/dd/yyyy" size="20"><b>(*)</b><br>
+
+		<b>Cấp độ:</b>
+		<select name="capDo">
+			<option value="capdouutien">---Chọn cấp độ ưu tiên---</option>
+			<option value="binhthuong">Bình thường</option>
+			<option value="gap">Gấp</option>
+			<option value="quantrong">Quan trọng</option>
+		</select><b>(*)</b><br>
+
+		<b>Gửi bộ phận:</b>
+		<input type="checkbox" name="pdaotao">
+		<label for="pdaotao">P Đào tạo</label>
+		<input type="checkbox" name="chamsochocvien">
+		<label for="chamsochocvien">Chăm sóc học viên</label><br>
+
+		<input type="submit" name="guingay" value="Gửi ngay">
+		<input type="reset" name="lamlai" value="Làm lại">
+		</form>
+	</td>
+		
+		<td>
+			<div>
+			<h2>ĐĂNG NHẬP</h2>
+		</div>
+		<form action="" name="form2" method="post" onsubmit="return login();">
+		<p>Email:</p>
+		<input type="email" name="email" size="10"><br>
+
+		<p>Mật khẩu:</p>
+		<input type="password" name="matkhau" size="10"><br>
+
+		<input type="submit" name="dangnhap" value="Đăng nhập">
+		</form>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

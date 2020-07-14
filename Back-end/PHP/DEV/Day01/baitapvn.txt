@@ -1,0 +1,17 @@
+1. Thiết kế form đăng ký thông tin khách hàng
+	họ và tên
+	tên đăng nhập
+	mật khẩu
+	ngày sinh
+	giới tính
+	sở thích : (Checkbox)
+	địa chỉ
+	email
+	điện thoại
+	quốc tịch
+=> khi người dùng nhấn nút đăng ký => chuyển dữ liệu sang trang thongtinkhachhang.php (hiển thị tất cả các thông tin vừa nhập)
+
+2. Thiết kế trang nhapsanpham.php
+nhập thông tin sản phẩm
+=> khi người dụng nhất vào nút thêm mới
+=> chuyển dữ liệu sang trang xulysanpham.php và hiển thị dữ liệu lên màn hình

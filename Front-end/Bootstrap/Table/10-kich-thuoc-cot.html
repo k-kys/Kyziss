@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kích thước cột</title>
+  </head>
+  <body>
+    <!-- 
+    Với Google, tôi đã tìm thấy một vài giải pháp để thiết lập chiều rộng cho các cột của một bảng trong Bootstrap. Tuy nhiên sau khi kiểm tra tôi thấy rằng có giải pháp hoạt động tốt với Firefox nhưng lại không hoạt động với Chrome. Dưới đây tôi đưa ra một vài ví dụ và giải pháp mà tôi cho rằng nó là tốt nhất:
+ -->
+    <h5>
+      Example 1: Một bảng có 3 cột. Cột thứ nhất có chiều rộng 10%, cột thứ 2 có
+      chiều rộng 70%, cột thứ 3 có chiều rộng 20%.
+    </h5>
+    <p>Giải pháp: Hãy sử dụng style ="width: X%".</p>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th style="width: 10%">No</th>
+          <th style="width: 70%">Language</th>
+          <th style="width: 20%">Percent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Java</td>
+          <td>14.21%</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>C</td>
+          <td>11.03%</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>C++</td>
+          <td>5.60%</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h5>
+      Example 2: Bạn có một bảng với 3 cột, và bạn muốn: <br />
+      Với các thiết bị có chiều rộng >= 567px 3 cột sẽ có tỷ lệ chiều rộng là:
+      1:9:2 <br />
+      Với các thiết bị có chiều rộng < 567px 3 cột sẽ có tỷ lệ chiều rộng là:
+      3:3:6
+    </h5>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="d-flex">
+          <th class="col-3 col-sm-1">No</th>
+          <th class="col-3 col-sm-9">Language</th>
+          <th class="col-6 col-sm-2">Percent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="d-flex">
+          <td class="col-3 col-sm-1">1</td>
+          <td class="col-3 col-sm-9">Java</td>
+          <td class="col-6 col-sm-2">14.21%</td>
+        </tr>
+        <tr class="d-flex">
+          <td class="col-3 col-sm-1">2</td>
+          <td class="col-3 col-sm-9">C</td>
+          <td class="col-6 col-sm-2">11.03%</td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

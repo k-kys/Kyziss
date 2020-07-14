@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Events</title>
+</head>
+<body>
+    <!-- <script>
+        // Viết chương trình gồm một ô input và một thẻ div dùng để hiển thị nội dung (giá trị của ô input) khi người dùng gõ vào ô input
+
+        // hàm show kết quả
+        function show_result() {
+            // lấy hai thẻ HTML
+            var input = document.getElementById("message");
+            var div = document.getElementById("result");
+
+            // gán nội dung ô input vào thẻ div
+            div.innerHTML = input.value;
+        }
+    </script>
+    <input type="text" id="message" value="" onkeyup="show_result()" />
+    <div id="result"></div> -->
+
+    <!-- <script>
+        // Viết chương trình khi người dùng copy nội dung của website thì thông báo là bạn đã copy thành công
+        // Hàm show kết quả
+      function show_message()
+      {
+        alert("Bạn đã copy thành công");
+      }
+    </script>
+    <h3>Hãy copy dòng chữ dưới đây:</h3>
+    <div oncopy="show_message()">Chào mừng các bạn đến với website freetuts.net</div> -->
+
+    <script>
+        // Viết chương trình tính tổng của hai số nhập vào (tính tự động)
+        function tinhTong() {
+            // lấy 3 ô input
+            var a = document.getElementById("a");
+            var b = document.getElementById("b");
+            var result = document.getElementById("result");
+
+            // tính tổng 2 ô đầu tiên
+            var tong = parseInt(a.value) + parseInt(b.value);
+
+            // gán gtri vào ô thứ 3, phải ktra tổng 2 số này có bị lỗi hay không
+            if (!isNaN(tong)) {
+                result.value = tong;
+            }
+        }
+    </script>
+    a: <input type="text" id="a" value="" onkeyup="tinhTong()" />
+    b: <input type="text" id="b" value="" onkeyup="tinhTong()" />
+    Kết quả: <input type="text" id="result" value=""/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

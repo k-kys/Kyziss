@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive Table</title>
+  </head>
+  <body>
+    <!-- 
+    - Sẽ rất là khó khăn để bạn tạo ra một bảng phù hợp với các thiết bị với chiều rộng màn hình khác nhau. Khi chiều rộng của thiết bị càng nhỏ các cột của bảng sẽ cố gắng thu nhỏ chiều rộng của chúng. Thực tế là các cột không thể thu nhỏ chiều rộng của nó về 0. Và khi bảng không thể giảm chiều rộng của nó thêm nữa thanh cuộn (scroll bar) nằm ngang trên trình duyệt sẽ xuất hiện.
+    - Giải pháp của Bootstrap là sử dụng một thẻ <div class="table-responsive[-sm|-md|-lg|-xl]"> bao lấy (wrap) một bảng, thanh cuộn (scroll bar) nằm ngang sẽ xuất hiện trên thẻ <div> nếu bảng không thể tự thu nhỏ chiều rộng của nó thêm nữa. Như vậy thanh cuộn nằm ngang sẽ xuất hiện trên thẻ <div> thay vì xuất hiện trên trình duyệt.
+.table-responsive       : Nếu bảng không thể tự thu nhỏ chiều rộng của nó hơn nữa, thanh cuộn nằm ngang sẽ xuất hiện.
+.table-responsive-sm    : Nếu chiều rộng của thiết bị (hoặc trình duyệt) nhỏ hơn 567px và bảng không thể tự thu nhỏ chiều rộng của nó hơn nữa, thanh cuộn nằm ngang sẽ xuất hiện.
+.table-responsive-md    : Nếu chiều rộng của thiết bị (hoặc trình duyệt) nhỏ hơn 768px và bảng không thể tự thu nhỏ chiều rộng của nó hơn nữa, thanh cuộn nằm ngang sẽ xuất hiện.
+.table-responsive-lg    : Nếu chiều rộng của thiết bị (hoặc trình duyệt) nhỏ hơn 992px và bảng không thể tự thu nhỏ chiều rộng của nó hơn nữa, thanh cuộn nằm ngang sẽ xuất hiện.
+.table-responsive-xl    : Nếu chiều rộng của thiết bị (hoặc trình duyệt) nhỏ hơn 1200px và bảng không thể tự thu nhỏ chiều rộng của nó hơn nữa, thanh cuộn nằm ngang sẽ xuất hiện.
+ -->
+    <div class="container-fluid">
+      <h4>Responsive Table:</h4>
+      <div class="table-responsive-sm">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Language</th>
+              <th>Language Description</th>
+              <th>First Release</th>
+              <th>Author</th>
+              <th>Percent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Java</td>
+              <td>Java is a programming language and computing platform...</td>
+              <td>1995</td>
+              <td>James Gosling</td>
+              <td>14.21%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Other Language</h3>
+      <ul>
+        <li>Go Language</li>
+      </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

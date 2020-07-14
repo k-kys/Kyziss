@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chuyển từng kí tự trong chuỗi thành mã char code tương ứng</title>
+</head>
+<body>
+	<script>
+		var txt="Cộng hòa xã hội chủ nghĩa Việt Nam";
+		document.write("Độ dài của chuỗi là: "+txt.length+"<br/>");
+		document.write("Mã char code của từng ký tự: <br/>");
+		//duyệt lấy từng kí tự trong chuỗi từ vị trí 0 đến hết
+		for(i=0;i<txt.length;i++){
+			document.write(txt[i]+"<>"+txt[i].charCodeAt(0)+"<br/>")
+		}
+	</script>
+</body>
+</html>

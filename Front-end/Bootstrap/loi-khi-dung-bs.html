@@ -1,0 +1,110 @@
+<h1>10 Lỗi thường gặp khi sử dụng Bootstrap</h1>
+
+
+<h3>Lỗi #1: Những quan niệm sai lầm căn bản về framework này</h3>
+
+Bạn hiểu sai khái niệm vì tài liệu Bootstrap không nói rõ, hoặc bạn không có đủ thời gian để đọc kỹ. Dẫn đến, bạn không hiểu đúng, làm sai, và đổ lỗi cho framework. Bootstrap tổng hợp đủ mọi thứ, nhưng dung lượng nó không quá lớn. Bootstrap đi kèm với
+những mẫu thiết kế HTML và CSS cơ bản mô tả cách dùng những thành phần giao diện (UI = User Interface) phổ biến. Chúng bao gồm Typography (định dạng văn bản), Tables (bảng), Forms, Buttons, Glyphicons (những icon biểu tượng nhỏ), Dropdowns, Buttons và
+Input Groups, Navigation (các dạng điều hướng/liên kết), Pagination (phân trang), Labels và Badges (nhãn và huy hiệu), Alerts (thông báo), Progress Bars (thanh tiến trình), Modals (hộp hội thoại), Tabs, Accordions, Carousels, và nhiều cái khác. Bạn có
+thể chọn một vài thành phần, và sử dụng những cấu hình mặc định của chúng để nhanh chóng tạo UI hỗ trợ đa trình duyệt, đa thiết bị truy cập web, và đa độ phân giải theo một định dạng tốt. Bootstrap không làm mọi việc cho bạn, nhưng nó cung cấp một số
+lượng hợp lý các mẫu mặc định để bạn chọn, như vậy, nó giúp developers tập trung nhiều hơn vào công việc phát triển so với việc lo lắng về thiết kế, và giúp họ có được 1 website đẹp, sẵn sàng hoạt động một cách nhanh chóng. Nó giúp cho việc tạo mẫu nhanh,
+nhưng nó giúp thiết kế hoàn thiện website, chứ không chỉ là việc tạo mẫu. Nó cho phép mở rộng, theo đó chúng ta có thể mở rộng nó tùy theo nhu cầu. Lúc mới ra đời, Bootstrap có nhược điểm, và việc mở rộng rất phức tạp. Nhưng càng ngày thì điều này càng
+được cải thiện.
+<hr>
+
+<h3>Lỗi #2: Cho rằng không cần biết CSS vẫn dùng được Bootstrap và không cần một designer</h3>
+
+Nếu bạn nghĩ dùng Bootstrap không cần biết CSS, thì bạn đã sai. Bất kỳ front-end developer nào cũng cần học CSS và HTML5. Bootstrap bỏ đi rất nhiều phần CSS trick (như là những tiền tố riêng của trình duyệt và cung cấp các định dạng mặc định cơ bản, do
+đó bạn vẫn cần phải hiểu CSS. Bạn không cần biết truy xuất theo thiết bị (media queries) hoạt động như thế nào, nhưng bạn cần hiểu thiết kế tương ứng (responsive design) hoạt động như thế. Bootstrap được làm ra không phải để dạy bạn CSS, nhưng nó có thể
+giúp nếu bạn muốn. Xem source code với dạng LESS hoặc SASS là một cách bắt đầu tốt. Một việc tương tự, bạn không cần một designer, và bạn có thể lý luận rằng bạn không cần một designer với Bootstrap. Tuy nhiên nếu có thể, hãy dùng sự trợ giúp của một
+designer. Một than phiền phổ biến với Bootstrap là những sites dùng Bootstrap nhìn giống nhau. Điều này có thể xãy ra. Hàng triệu websites được xây dựng bằng Bootstrap. Những ví dụ tốt cho thấy những thiết kế khác nhau có được bằng cách nào được trình
+bày ở Bootstrap Expo, một trang tập hợp những sites dùng Bootstrap. Hãy xem xét, lấy cảm hứng, và bắt đầu xây dựng thiết kế riêng biệt của bạn.
+<hr>
+
+<h3>Lỗi #3: Thay đổi file CSS của Bootstrap</h3>
+
+Đơn giản là: Không được sửa file bootstrap.css. Nếu bạn thay đổi file bootstrap.css, mọi thứ sẽ sớm trở nên phức tạp. Toàn bộ thiết kế sẽ bị hư khi bạn muốn nâng cấp những file Bootstrap. Bạn có thể viết đè (overwrite) trong trang định dạng (stylesheet)
+của riêng bạn những thiết lập mặc định của Bootstrap về colors (màu sắc), styles (định dạng), margins (lề ngoài), paddings (lề trong), mọi thứ khác. Không việc gì phải đụng đến file bootstrap.css. Bạn không biết LESS hoặc SASS? Không sao, bạn có thể tạo
+file CSS riêng và viết đè bất cứ gì từ bootstrap.css. Bạn muốn biết nhiều hơn? Hãy dùng source code theo dạng LESS của Bootstrap. Bạn sẽ hiểu rõ hơn điều gì đang diễn ra, và cái nào nằm ở đâu (dòng nào trong file) nếu bạn dùng mã LESS (LESS source), không
+phải CSS tĩnh (static CSS).
+<hr>
+
+<h3>Lỗi #4: Dùng HẾT mọi thứ Bootstrap cung cấp</h3>
+
+Như đã nói ở trên, Bootstrap tổng hợp nhiều thứ, UI components (những thành phần giao diện), HTML and CSS design templates (những mẫu thiết kế HTML và CSS), và JavaScript plugins. Nhưng hãy sử dụng CÓ CHỌN LỌC. Bạn không cần phải dùng mọi thứ của Bootstrap.
+Đặc biệt với plugins. CHỈ dùng những plugins mà bạn cần, và đừng dùng mọi thứ vì chúng trông đẹp và hay. Website của bạn sẽ bị làm quá (overdone). Hãy bắt đầu bằng việc không dùng file bootstrap.js, và tạo site chỉ bằng HTML và CSS. Sau đó, thêm thành
+phần nào cần cho những việc cụ thể, từng cái một.
+<hr>
+
+<h3>Lỗi #5: Dùng hộp hội thoại sai cách</h3>
+Bootstrap modals (hộp hội thoại) cung cấp những khung hội thoại linh hoạt với tính năng yêu cầu tối thiểu, và nó kèm theo những mặc định thông minh (smart defaults). Mặc dù modal thì dễ dùng và cung cấp những hiệu chỉnh phong phú, có một vài điều chúng
+ta cần nhớ để tránh những cách dùng sai phổ biến. Hiển thị nhiều hơn một modal Bootstrap không hỗ trợ hiển thị chồng (overlapping) modals. Chỉ 1 modal tại 1 thời điểm có thể hiển thị. Hiển thị nhiều hơn 1 modal tại 1 thời điểm có thể đạt được, nhưng cần
+chỉnh sửa code để thực hiện điều này một cách đúng đắn. Modal Bootstrap xuất hiện sai (bên dưới phần nền) Nếu đối tượng chứa modal hoặc thành phần cha của nó có thuộc tính position là fixed hoặc relative, modal sẽ không hiển thị đúng. Luôn luôn chắc rằng
+đối tượng chứa modal và thành phần cha của nó không dùng thuộc tính position đặc biệt. Cách tốt nhất là đặt mã HTML của modal ngay trước thẻ đóng
+< /body>, hoặc tốt hơn nữa là ngay sau thẻ mở
+    < body>. Đây là cách tốt nhất để tránh những thành phần khác ảnh hưởng tới giao diện và tính năng của modal. Modal trên thiết bị di động (mobile devices) Có một số cảnh báo mà developers cần biết khi làm việc với modals trên thiết bị di động dùng bàn phím
+        ảo mobile devices with virtual keyboards. Đặc biệt chú ý các thiết bị chạy iOS, có một lỗi hiển thị, những thành phần có thuộc tính position là fixed sẽ không được thay đổi thuộc tính này khi bàn phím ảo xuất hiện. Bootstrap không xử lý vấn đề
+        này, nên developer sẽ phải xử lý những vấn đề này trong code.
+        <hr>
+
+        <h3>Lỗi #6: Vấn đề với nút chọn file để upload</h3>
+
+        Bootstrap không thiết kế sẵn thành phần tương ứng với nút upload file. Một cách đơn giản để có được nút upload file đẹp mắt là đoạn HTML và CSS sau:
+
+        <span class="btn btn-default btn-file">
+    Browse <input type="file">
+</span> .btn-file { position: relative; overflow: hidden; } .btn-file input[type=file] { position: absolute; top: 0; right: 0; min-width: 100%; min-height: 100%; font-size: 100px; text-align: right; filter: alpha(opacity=0); opacity: 0; outline:
+        none; background: white; cursor: inherit; display: block; } Có nhiều ví dụ mẫu khác để làm được việc tương tự. Ví dụ mẫu này là của Cory LaViska, chi tiết về nó thì bạn đọc tại site của mr ý. Cũng có một ví dụ mẫu mở rộng khác cung cấp nhiều tính
+        năng hơn thông qua việc sử dụng thêm mã JavaScript.
+        <hr>
+
+        <h3>Lỗi #7: Phức tạp hóa bằng việc viết thêm code Javascript, bỏ qua những thuộc tính "data-" </h3>
+
+        Phức tạp hóa bằng việc viết thêm code JavaScript và bỏ qua những thuộc tính “data-” Designers, hoặc developers JavaScript mới vào nghề, nếu họ không hiểu về JavaScript, họ sẽ không biết cách sử dụng và phức tạp hóa JavaScript. Phải CHÚ Ý rằng mọi plugins
+        của Bootstrap có thể áp dụng chỉ đơn thuần thông qua HTML, không cần viết thêm dù chỉ 1 dòng code JavaScript. Đây gọi là API thứ tự đầu tiên của Bootstrap (Bootstrap’s first-class API) và bạn phải xem đây là giải pháp trước nhất khi làm việc với
+        plugins. Ví dụ, chúng ta có thể kích hoạt 1 modal, không dùng code JavaScript, như sau, thiết lập thuộc tính data-toggle="modal" cho đối tượng kích hoạt như button hay liên kết
+        <a></a>, data-target=#myModal là thiết lập modal có id là myModal sẽ được kích hoạt/hiển thị, data-backdrop=”static” là không đóng modal khi user clicks ra ngoài modal, và data-keyboard=”false” là không đóng modal khi user nhấn phím escape. 4 thuộc
+        tính được bỏ trong 1 tag HTML kích hoạt duy nhất:
+
+        < button type="button" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Launch my modal
+            < /button>
+                <hr>
+
+                <h3>Lỗi #8: Không dùng tools giúp làm việc với Bootstrap dễ dàng</h3>
+
+                Developers mắc nhiều lỗi khi dùng Bootstrap. Do đó, Bootstrap tạo ra Bootlint, 1 tool kiểm tra cấu trúc HTML của những projects dùng Bootstrap. Bootlint có thể dùng thông qua browser hoặc thông qua dòng lệnh trên nền Node.js. Bootlint giúp bạn làm việc
+                nhanh hơn. Cao cấp hơn, nếu bạn muốn đóng góp vào project Bootstrap, bạn nên tìm hiểu Rorschach. Rorschach là công cụ tự động kiểm tra tính hợp lệ của một bản đóng góp code, nó sẽ thực thi một số kiểm tra đối với mỗi bản đóng góp code.
+                Nếu nó thấy không thỏa mãn tính hợp lệ, nó sẽ comment báo lỗi gì và sửa ra sao, và đóng yêu cầu đóng góp code.
+                <hr>
+
+                <h3>Lỗi #9: Lỗi không tương thích với IE8 và những trình duyệt cũ hơn</h3>
+                Bootstrap hoạt động tốt nhất trên những trình duyệt mobile và máy tính mới. Những trình duyệt cũ sẽ hiển thị giao diện với định dạng khác đi, nhưng mọi thứ vẫn hoạt động bình thường. Sự hỗ trợ bao gồm Internet Explorer 8 và 9, với CHÚ Ý rằng một số thuộc
+                tính CSS3 và một số thành phần HTML5 không được hỗ trợ đầy đủ trên những trình duyệt này. Bootstrap browser compatibility Để có sự hỗ trợ đầu đủ cho Internet Explorer 8 và những trình duyệt cũ hơn khác, bạn cần dùng tool hỗ trợ cho những
+                truy xuất CSS3 (CSS3 Media Queries) là Respond.js, HTML 5 shim, những tool này cho phép hiển thị những thành phần HTML5, và thêm một thẻ
+                <meta> để đảm bảo IE không chạy trong chế độ compatibility mode. Phần mã HTML head trông sẽ như sau:
+                <pre>
+                    <code>
+< head>
+    ...
+    < meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+< /head>
+</code>
+</pre> Khi dùng Respond.js, chú ý những cảnh báo sau khi phát triển & xuất bản ứng dụng.
+                <hr>
+
+                <h3>Lỗi #10: Bỏ qua những khuôn mẫu tốt</h3>
+
+                Một câu hỏi phổ biến trên Stack Overflow là làm cách nào để menu Bootstrap xổ xuống khi rê chuột qua, chứ không đợi tới khi click. Vấn đề này không quá phức tạp và được giải quyết bằng CSS, nhưng khuôn mẫu tốt là không nên giải quyết nó. Tính năng này
+                bị Bootstrap bỏ ra rìa là có lý do, đặc biệt khi Bootstrap là framework ưu tiên hỗ trợ mobile (mobile first framework). Lý do ở đây là thiết bị cảm ứng không có hành động rê chuột, mà chỉ có hành động chạm (only touch events). Nên trên
+                mobile nó sẽ không làm việc đúng.
+                <hr>
+
+                <h3>Kết luận</h3>
+
+                Trong bài hướng dẫn ngắn ngọn này, tôi hy vọng giúp bạn tránh được một số lỗi phổ biến, tránh hiểu sai những khái niệm căn bản, và sử dụng framework hiệu quả nhất. CHÚ Ý rằng, Bootstrap không phải dành cho mọi người, cũng không phải phù hợp cho mọi project.
+                Khi chọn một framework, bạn phải dành thời gian đọc tài liệu, và "chơi" framework để cảm nhận nó và hình dung nó hoạt động như thế nào. Bootstrap cũng cần làm như vậy.

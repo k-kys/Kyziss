@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>BOM Location</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h3>Chào mừng bạn đến với freetuts.net</h3>
+      <button onclick="refreshPage()">Refresh</button>
+    </div>
+</div>
+    <div class="container">
+        <div class="row">
+            <h3>Click vào để chuyển hướng đến freetuts.net</h3>
+            <button onclick="replacePage()">replace()</button>
+            <button onclick="hrefPage()">location.href</button>
+        </div>
+    </div>
+<div class="container">
+    <div class="row">
+        <h3>Click vào để chuyển hướng đến freetuts.net</h3>
+        <button onclick="assignPage()">assign()</button>
+    </div>
+</div>
+      
+<script>
+// window.location.reload(url) - tải lại trang web
+    function refreshPage()
+        {
+            window.location.reload(); 
+        }
+
+
+
+
+// window.location.replace(urr) - ghi đè trang web
+// Phương thức này ít khi sử dụng mà thay vào đó họ sử dụng cú pháp window.location.href="url". Tuy nhiên hai cách này vẫn có sự khác biệt:
+// Đối với replace() thì trình duyệt sẽ KHÔNG đưa vào lịch sử.
+// Đối với location.href thì trình duyệt sẽ CÓ đưa vào lịch sử 
+        function replacePage()
+        {
+          window.location.replace('https://khuong2k.blogspot.com'); 
+        }
+         
+        function hrefPage()
+        {
+          window.location.href = 'https://khuong2k.blogspot.com';
+        }
+
+
+
+
+// window.location.assign(url) - load một trang mới
+// đặc điểm giống với location.href
+        function assignPage()
+        {
+          window.location.assign('https://khuong2k.blogspot.com'); 
+        }
+
+
+
+
+
+
+// Ngoài các phương thức trên thì bạn có thể sử dụng Location để xử lý các thành phần liên quan đến URL như lấy phần hash, lấy phần search. 
+// Lưu ý: các thuộc tính này bạn có thể dùng đẻ lấy (get) hoặc thiết lập (set).
+
+// hash: thiết lập hoặc lấy phần sau dấu # của URL
+// host: thiết lập hoặc lấy hostname và port number của URL
+// hostname: thiết lập hoặc lấy hostname
+// href: thiết lập hoặc lấy URL
+// origin: trả về protocal, hostname và port number của URL
+// pathname: thiết lập hoặc lấy path name của URL
+// port: thiết lập hoặc lấy port của URL
+// search: lấy phần query string của URL
+
+        document.write("hash: " +window.location.hash + "<br/>");
+        document.write("host: " +window.location.host + "<br/>");
+        document.write("hostname: " +window.location.hostname + "<br/>");
+        document.write("href: " +window.location.href + "<br/>");
+        document.write("origin: " +window.location.origin + "<br/>");
+        document.write("pathname: " +window.location.pathname + "<br/>");
+        document.write("port: " +window.location.port + "<br/>");
+        document.write("search: " +window.location.search + "<br/>");
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

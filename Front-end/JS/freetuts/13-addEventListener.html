@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>addEventListener</title>
+</head>
+<body>
+
+    <!-- Để thêm sự kiện cho đối tượng HTML thì chúng ta có cú pháp như sau (xem lại bài thêm sự kiện bằng javascript):
+
+    elementObject.eventName  = function(){
+        // do something
+    };
+
+    Nhưng nếu bạn sử dụng hàm addEventListener() thì cú pháp như sau:
+
+    elementObject.addEventListener('eventName', function(e){
+        // do something
+    });
+
+    Trong đó:
+    eventName là tên của sự kiện bỏ đi chữ on, ví dụ 'onclick' -> 'click', change, ...
+    function ở tham số thứ hai chính là hàm sẽ được chạy khi sự kiện eventName được kích hoạt  -->
+
+    <!-- khi nhập dữ liệu vào ô input thì hiển thị giá trị của ô input đó ra bên ngoài -->
+    <!-- <input type="text" id="txt-val" value="" />
+    <div id="result"></div>
+    <script>
+        // lấy object
+        var input = document.getElementById("txt-val");
+
+        // thêm event cho obj
+        input.addEventListener('keyup', function() {
+            // gán gtri vào div
+            document.getElementById('result').innerHTML = input.value;
+        })
+
+        // Bổ sung thêm chức năng ở ví dụ 1 như sau: nếu chiều dài của chuỗi nhập vào nhiều hơn 5 ký tự thì thông báo 
+        input.addEventListener('keyup', function() {
+            if (input.value.length > 5) {
+                alert('Bạn đã nhập nhiều hơn 5 ký tự');
+            }
+        })
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Thêm sự kiện cho đối tượng window
+    Đối tượng window ta có thể ví nó như cửa sổ trình duyệt browser nên nó sẽ có một số sự kiện riêng, điển hình là sự kiện resize browser. Như vậy với hàm addEventListener() ta cũng có thể thêm sự kiện cho window. -->
+    <!-- <h4>Bạn hãy zoom trình duyệt</h4>
+        <div id="result"></div>
+        <script language="javascript">
+          window.addEventListener("resize", function(){
+            document.getElementById("result").innerHTML = "Bạn vừa zoom Browser";
+          });
+        </script> -->
+
+
+
+
+
+
+
+
+
+
+<!-- Nếu bạn muốn truyền tham số vào thì bắt buộc bạn phải tạo một hàm khác rồi gọi nó từ hàm addEventListener(). -->
+
+<!-- <button type="button" class="btn btn-success" id="btn">do_something</button>
+
+<script>
+    var button = document.getElementById("btn");
+    button.addEventListener('click', function () {
+        do_something(2, 3);
+    })
+
+    function do_something(a, b) {
+        alert(a + b);
+    }
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- RemoveEventListener()
+
+Xây dựng một ứng dụng khi di chuyển chuột thì sẽ xuất hiện một dãy số ngẫu nhiên, nếu người dùng click vào button Stop Random thì sẽ dừng random dãy số đó.
+Như vậy ta có hai thẻ HTML chính, thứ nhất là một div dùng để hiển thị dãy số ngẫu nhiên và thứ hai là một button dùng để để click Stop Random. Và dây là một số lưu ý trước khi làm bài:
+
+Đề bài yêu cầu khi move chuột trên trang web nên ta sẽ thêm sự kiện mousemove cho thẻ <html>.
+Dùng hàm addEventListener() để thêm sự kiện mousemove vào thẻ <html>
+Dùng đối tượng Math.random() để lấy dãy số ngẫu nhiên
+Dùng hàm removeEventListener() để xóa đi những hành động của sự kiện mousemove. -->
+
+<div id="result"></div>
+<input type="button" value="Stop random" id="stop_random"/>
+<script>
+    // b1: lấy các obj
+    var result = document.getElementById("result");
+    var button = document.getElementById("stop_random");
+    var html = document.getElementsByTagName("html")[0];
+
+    // b2: định nghĩa hành động hiển thị dãy số random
+    function do_random() {
+        var randomString = Math.random();
+        result.innerHTML = randomString;
+    }
+
+    //b3: thêm action do_random cho event mousemove thẻ <html>
+    html.addEventListener("mousemove", do_random);
+
+    // b4: thêm event click cho btn
+    button.addEventListener("click", function () {
+        // xóa action random khỏi event mousemove
+        html.removeEventListener("mousemove", do_random);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

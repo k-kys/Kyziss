@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>BOM window</title>
+</head>
+<body>
+<script>
+// Chrome, Firefox, Opera, và Safari
+    // lấy chiều cao browser
+    // var heightBrowser = window.innerHeight;
+    
+    // lấy chiều rộng browser
+    // var widthBrowser = window.innerWidth;
+
+//  Internet Explorer các version 5,6,7,8
+    // Lấy chiều cao
+    // var height = document.documentElement.clientHeight;
+    // hoặc
+    // var height = document.body.clientHeight;
+    
+    // Lấy chiều rộng
+    // var width = document.documentElement.clientWidth;
+    // hoặc
+    // var width = document.body.clientWidth;
+
+// Gộp các cách trên cả IE và Chrome...
+//     var width = window.innerWidth
+// || document.documentElement.clientWidth
+// || document.body.clientWidth;
+ 
+// var height = window.innerHeight
+// || document.documentElement.clientHeight
+// || document.body.clientHeight;
+ 
+// document.write("Trình duyệt có chiều rộng là: " + width + "<br/>");
+// document.write("Trình duyệt có chiều cao là: " + height + "<br/>");
+
+
+
+// THAO TÁC VS 1 CỬA SỔ WINDOW 
+
+// Mở một cưa sổ với lệnh window.open()
+// window.open(url, name, options)
+//     url : là đường dẫn website bạn muốn mở
+//     name: là tên bạn đặt cho cửa sổ này
+//     options: là một chuỗi các thông số được cách nhau bởi dấu phẩy, sau đây là các thông số thông dụng:
+//         height=pixels : chiều cao của cửa sổ
+//         width=pixels: chiều rộng của cửa sổ
+//         top=pixels: vị trí hiển thị cửa sổ so với lề trên
+//         left=pixels: vị trí hiển thị cửa sổ so với lề trái
+//         menubar=yes|no|1|0: có hiển thị thanh menu hay không?
+//         resizable=yes|no|1|0: có hiển thị biểu tượng resize cửa sổ hay không?
+//         scrollbars=yes|no|1|0: có hiển thị thanh cuộn hay không?
+//         status=yes|no|1|0: có hiển thị thanh trạng thái hay không?
+//         titlebar=yes|no|1|0: có hiển thị titlebar hay không?
+//         toolbar=yes|no|1|0: có hiển thị toolbar hay không?
+//         fullscreen=yes|no|1|0: có hiển thị biểu tượng fullscreen hay không?
+
+         var windowChild = null;
+          
+         function openWindow()
+         {
+           windowChild = window.open('https://khuong2k.blogspot.com', "windowChild", "width=1000, height=500");
+           windowChild.moveTo(100, 150);    // moveTo() di chuyển cửa sổ ra vị trí khác
+           windowChild.resizeTo(300, 300); // resizeTo() chỉnh lại kich thước khi hiển thị
+            windowChild.focus();
+             return false;
+         }
+
+// Đóng một cửa số với lệnh window.close()
+// Sau khi mở cửa sổ thì để đóng cửa sổ đó chúng ta sử dụng lệnh windowObj.close(), trong đó windowObj là cửa sổ mà ta sử dụng lệnh window.open() tạo ra.
+        function closeWindow()
+        {
+            windowChild.close()
+            return false;
+        }
+
+
+// Di chuyển cửa sổ với lệnh window.moveTo()
+// Sau khi mở một cửa sổ nếu muốn di chuyển nó thì ta dùng lệnh windowObj.moveTo(left, top), trong đó:
+// top: là số pixels so với lề trên
+// left: là số pixels so với lề trái
+        // function moveWindow()
+        // {
+        //     windowChild.moveTo(500, 100);
+        //     windowChild.focus();
+        //     return false;
+        // }
+
+
+// Resize cửa sổ với lệnh window.resizeTo()
+// Lúc mở cửa sổ bạn sẽ thiết lập height và with cho window, tuy nhiên nếu sau khi mở bạn muốn thay đổi thì sử dụng hàm windowObj.resizeTo(width, height), trong đó:
+// width: chiều rộng của cửa sổ
+// height: chiều cao của cửa sổ
+        // function resizeWindow()
+        // {
+        //     windowChild.resizeTo(1000, 1000);
+        //     windowChild.focus();
+        //     return false;
+        // }
+
+
+
+
+
+
+</script>
+
+<a href="#" onclick="return openWindow()" class="btn btn-primary" >Open</a>
+<a href="#" onclick="return closeWindow()" class="btn btn-primary" >Close</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

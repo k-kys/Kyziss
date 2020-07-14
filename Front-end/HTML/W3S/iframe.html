@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Iframe</title>
+</head>
+<body>
+    <pre>
+    - Một iframe HTML được sử dụng để hiển thị một trang web trong một trang web.
+    Sử dụng các thuộc tính height và width để chỉ định kích thước của iframe. Theo mặc định, chiều cao và chiều rộng được chỉ định bằng pixel.
+    - Theo mặc định, iframe có viền xung quanh nó. Để xóa đường viền, thêm thuộc tính style và sử dụng thuộc tính viền CSS: style="border:none;"
+    - Với CSS, bạn cũng có thể thay đổi kích thước, kiểu và màu của đường viền của iframe: style="border:2px solid red;"
+    - Một iframe có thể được sử dụng làm khung đích cho một liên kết. Thuộc tính đích của liên kết phải tham chiếu đến thuộc tính tên của iframe:
+</pre>
+<h2>Iframe - Target for a Link</h2>
+<iframe height="600px" width="100%" src="https://3.bp.blogspot.com/-dKXnbXDgiu8/Xpna1TLKMBI/AAAAAAAAB94/rd53zPsKHzMZ5jq4o7GY3L5ZMcZjTWKYwCK4BGAYYCw/s1600/tqk-k.jpg" name="iframe_a"></iframe>
+<p><a href="https://khuong2k.blogspot.com/" target="iframe_a">Khuong2k.blogspot.com</a></p>
+<p>When the target of a link matches the name of an iframe, the link will open in the iframe.</p>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

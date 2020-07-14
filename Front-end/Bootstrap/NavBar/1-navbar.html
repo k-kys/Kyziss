@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>NavBar</title>
+  </head>
+  <body>
+    <!-- 
+- Để tương thích với các thiết bị có độ rộng màn hình khác nhau. Thanh công cụ của Bootstrap có thể mở rộng (expand) hoặc thu nhỏ (collapse) tùy thuộc vào kích thước màn hình. Hành vi đơn giản nhất là nó biến đổi từ một thanh công cụ nằm ngang thành thẳng đứng khi độ rộng màn hình nhỏ.
+- Các thanh công cụ tiêu chuẩn được tạo ra với lớp .navbar, và lớp .navbar-expand-xl|lg|md|sm để chỉ rõ với những độ rộng màn hình nào thì thanh công cụ sẽ mở rộng (expand), ngược lại thì nó thu gọn (collapse).
+- Một ".navbar" có thể chứa một hoặc nhiều ".navbar-nav" 
+	-->
+
+    <h2>1- NavBar</h2>
+    <h4>.navbar .navbar-expand-sm</h4>
+    <!-- Một thanh điều hướng ngang trở nên thẳng đứng trên màn hình nhỏ -->
+    <nav class="navbar navbar-expand-sm bg-dark">
+      <!-- nếu bỏ .navbar-expand-sm thì thanh công vụ luôn thẳng đứng -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Css</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Bootstrap</a>
+        </li>
+      </ul>
+    </nav>
+
+    <h4>.justify-content-center</h4>
+    <!-- Lớp .justify-content-center làm các .navbar-nav nằm chính giữa thanh công cụ. -->
+    <nav class="navbar navbar-expand-sm justify-content-center bg-dark">
+      <!-- nếu bỏ .navbar-expand-sm thì thanh công vụ luôn thẳng đứng -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Css</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Bootstrap</a>
+        </li>
+      </ul>
+    </nav>
+
+    <h4>Colored Navbar</h4>
+    <!-- 
+	.navbar-dark	: Sử dụng lớp này nếu bạn thông báo với Bootstrap rằng thanh công cụ của bạn đang sử dụng mầu nền tối mầu. 					Bootstrap sẽ tự động sét đặt mầu chữ cho tất cả các Nav-item thành mầu trắng.
+	.navbar-light	Sử dụng lớp này nếu bạn thông báo với Bootstrap rằng thanh công cụ của bạn đang sử dụng mầu nền sáng 					mầu. Bootstrap sẽ tự động sét đặt mầu chữ cho tất cả các Nav-item thành mầu đen.
+	 -->
+    <nav class="navbar navbar-expand-sm bg-warning navbar-light">
+      <!-- links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Css</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Bootstrap</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 
+	.active		: Sử dụng lớp này nếu bạn muốn Bootstrap làm nổi bật (highlight) một Nav-item nào đó. Giống như nó đang được lựa chọn (hoặc đang đươc kích hoạt).
+    .disabled	: Sử dụng lớp này nếu bạn muốn Bootstrap vô hiệu hóa (disable) một Link nào đó, người dùng sẽ không thể nhấn vào Link này. 
+    -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Css</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Bootstrap</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link disabled" href="#">AngularJS (Disabled)</a>
+        </li>
+      </ul>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

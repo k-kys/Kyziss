@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hàm alert,prompt,các câu lệnh điều kiện và hàm để giải pt bậc 2</title>
+</head>
+<body>
+	<script>
+		//cho phép người dùng nhập vào các số a,b,c
+		var a=prompt("Nhập vào số a:");
+		var b=prompt("Nhập vào số b:");
+		var c=prompt("Nhập vào số c:");
+		//kiểm tra số a
+		if(a==0){
+			//gọi function giải ptb1()
+			ptb1(b,c);
+		}else{
+			ptb2(a,b,c);
+		}
+		
+		function ptb1(b,c){
+			if(b==0){
+				if(c==0){
+				document.write("Phương trình vô số nghiệm");
+				}else{
+				document.write("Phương trình vô nghiệm");
+				}
+			}else{
+				nghiem=-b/c;
+				document.write("Phương trình có nghiệm là: "+nghiem);
+			}
+		}
+
+		function ptb2(a,b,c){
+			var delta=b*b-4*a*c;
+			if(delta<0){
+				document.write("Phương trình vô nghiệm");
+			}else if(delta=0){
+				var nghiem=-b/(2*a);
+				document.write("Phương trình có nghiệm kép: "+nghiem);
+			}else{
+				var nghiem1=(-b+Math.sqrt(delta))/(2*a);
+				var nghiem2=(-b-Math.sqrt(delta))/(2*a);
+				document.write("Nghiệm thứ nhất x1="+nghiem1+"<br/>");
+				document.write("Nghiệm thứ hai x2="+nghiem2);
+			}
+		}
+	</script>
+</body>
+</html>

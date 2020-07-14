@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>DOM là gì</title>
+</head>
+<body>
+
+    <!-- đoạn code này có ý nghĩa rằng tìm thẻ có id="main-content"và gán nội dung HTML bên trong của thẻ này là dòng chữ "Chào mừng các bạn đến với website học lập trình online freetuts.net" -->
+    <h1 id="main-content"></h1>
+    <script language="javascript">
+      document.getElementById("main-content").innerHTML = "Chào mừng các bạn đến với website học lập trình online freetuts.net"
+    </script>
+
+
+<!-- Danh sách chia nhóm DOM:
+
+DOM document: có nhiệm vụ lưu trữ toàn bộ các thành phần trong tài liệu của website
+DOM element: có nhiệm vụ truy xuất tới thẻ HTML nào đó thông qua các thuộc tính như tên class, id, name của thẻ HTML
+DOM HTML: có nhiệm vụ thay đổi giá trị nội dung và giá trị thuộc tính của các thẻ HTML
+DOM CSS: có nhiệm vụ thay đổi các định dạng CSS của thẻ HTML
+DOM Event: có nhiệm vụ gán các sự kiện như onclick(), onload() vào các thẻ HTML
+DOM Listener: có nhiệm vụ lắng nghe các sự kiện tác động lên thẻ HTML đó
+DOM Navigation dùng để quản lý, thao tác với các thẻ HTML, thể hiện mối quan hệ cha - con của các thẻ HTML
+DOM Node, Nodelist: có nhiệm vụ thao tác với HTML thông qua đối tượng (Object) -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+div {
+	background: blue;
+	width: 450px;
+	padding: 10px;
+	border-radius: 5px;
+	text-align: center;
+}
+tr td div{
+	background: green;
+	padding: 1px;
+}
+#form1 {
+	padding-top: 10px;
+}
+#form2 {
+	padding-top: 5px;
+}

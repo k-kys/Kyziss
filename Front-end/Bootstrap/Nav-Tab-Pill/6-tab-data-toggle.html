@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Nav-tabs data-toggle</title>
+  </head>
+  <body>
+    <h3>6- Nav-Tabs Data-Toggle</h3>
+    <!-- Một Nav(Tab) đơn giản thực sự là một menu tĩnh (static menu), các Nav-Item không thể thay đổi trạng thái của nó, người dùng nhấn vào Nav-item để nhẩy sang một trang khác. Một Nav(Tab) phức tạp hơn cho phép hiển thị nội dung tương ứng với Nav-Item mà người dùng nhấn vào mà không nhẩy sang môt trang khác. -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="tab-javascript"
+          data-toggle="tab"
+          href="#content-javascript"
+          role="tab"
+          aria-controls="content-javascript"
+          aria-selected="false"
+        >
+          Javascript
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="tab-css"
+          data-toggle="tab"
+          href="#content-css"
+          role="tab"
+          aria-controls="content-css"
+          aria-selected="false"
+        >
+          CSS
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          id="tab-bootstrap"
+          data-toggle="tab"
+          href="#content-bootstrap"
+          role="tab"
+          aria-controls="content-bootstrap"
+          aria-selected="true"
+        >
+          Bootstrap
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div
+        class="tab-pane fade show"
+        id="content-javascript"
+        role="tabpanel"
+        aria-labelledby="tab-javascript"
+      >
+        JavaScript is a cross-platform, object-oriented scripting language ...
+      </div>
+      <div
+        class="tab-pane fade show"
+        id="content-css"
+        role="tabpanel"
+        aria-labelledby="tab-css"
+      >
+        CSS stands for Cascading Style Sheets. ...
+      </div>
+      <div
+        class="tab-pane fade show active"
+        id="content-bootstrap"
+        role="tabpanel"
+        aria-labelledby="tab-bootstrap"
+      >
+        Bootstrap is a free front-end framework for faster and easier web
+        development...
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

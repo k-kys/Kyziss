@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Style sheet - cách dùng position (absolute,relative)</title>
+	<style type="text/css">
+		#mauvang{ 
+			width: 300px;
+		 	height: 100px;
+		 	border: 10px solid yellow;}
+		 #mauden{
+		 	width: 300px;
+		 	height: 100px;
+		 	border: 10px solid black;
+		 }
+		 #hopmaudo{
+		 	position: relative;
+		 	top: 50px;
+		 	left: 50px;
+		 	width: 100px;
+		 	height: 100px;
+		 	border: 1px solid red; background: red;
+		 }
+		</style>
+</head>
+<body>
+	<div id="mauvang"></div>
+	<p>Vị trí tương đối là nội dung của phần tử luôn được định vị theo góc trên bên trái của
+phần tử chứa (lấy góc trên bên trái của phần tử cha làm gốc tọa độ để định vị).
+Để định vị trí nội dung bên trong phần tử theo vị trí tương đối, bạn thiết lập giá trị
+relative cho thuộc tính position.</p>
+	<div id="mauden">
+		<div id="hopmaudo"></div>
+	</div>
+</body>
+</html>

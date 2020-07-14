@@ -1,0 +1,1 @@
+<h1>THÔNG TINĐĂNG KÝ</h1>

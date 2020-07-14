@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Entities</title>
+    <style>
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 70px;
+        }
+        
+        hr {
+            border: 5px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Các thực thể ký tự được sử dụng để hiển thị các ký tự dành riêng trong HTML. Một thực thể nhân vật trông như thế này:
+    &entity_name;
+    OR
+    &#entity_number; -->
+    <div class="container">
+        <h1>Entities</h1>
+
+        <h3>Some Other Useful HTML Character Entities</h3>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Result</th>
+                    <th>Description</th>
+                    <th>Entity Name</th>
+                    <th>Entity Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>non-breaking space</td>
+                    <td>&amp;nbsp;</td>
+                    <td>&amp;#160;</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>less than</td>
+                    <td>&amp;lt;</td>
+                    <td>&amp;#60;</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>greater than</td>
+                    <td>&amp;gt;</td>
+                    <td>&amp;#62;</td>
+                </tr>
+                <tr>
+                    <td>&amp;</td>
+                    <td>ampersand</td>
+                    <td>&amp;amp;</td>
+                    <td>&amp;#38;</td>
+                </tr>
+                <tr>
+                    <td>"</td>
+                    <td>double quotation mark </td>
+                    <td>&amp;quot;</td>
+                    <td>&amp;#34;</td>
+                </tr>
+                <tr>
+                    <td>'</td>
+                    <td>single quotation mark (apostrophe) </td>
+                    <td>&amp;apos;</td>
+                    <td>&amp;#39;</td>
+                </tr>
+                <tr>
+                    <td>¢</td>
+                    <td>cent</td>
+                    <td>&amp;cent;</td>
+                    <td>&amp;#162;</td>
+                </tr>
+                <tr>
+                    <td>£</td>
+                    <td>pound</td>
+                    <td>&amp;pound;</td>
+                    <td>&amp;#163;</td>
+                </tr>
+                <tr>
+                    <td>¥</td>
+                    <td>yen</td>
+                    <td>&amp;yen;</td>
+                    <td>&amp;#165;</td>
+                </tr>
+                <tr>
+                    <td>€</td>
+                    <td>euro</td>
+                    <td>&amp;euro;</td>
+                    <td>&amp;#8364;</td>
+                </tr>
+                <tr>
+                    <td>©</td>
+                    <td>copyright</td>
+                    <td>&amp;copy;</td>
+                    <td>&amp;#169;</td>
+                </tr>
+                <tr>
+                    <td>®</td>
+                    <td>registered trademark</td>
+                    <td>&amp;reg;</td>
+                    <td>&amp;#174;</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr/>
+
+        <h3>Combining Diacritical Marks</h3>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Mark</th>
+                    <th>Character</th>
+                    <th>Construct</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&nbsp;̀</td>
+                    <td>a</td>
+                    <td>a&amp;#768;</td>
+                    <td>à</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;́</td>
+                    <td>a</td>
+                    <td>a&amp;#769;</td>
+                    <td>á</td>
+                </tr>
+                <tr>
+                    <td>̂</td>
+                    <td>a</td>
+                    <td>a&amp;#770;</td>
+                    <td>â</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;̃</td>
+                    <td>a</td>
+                    <td>a&amp;#771;</td>
+                    <td>ã</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;̀</td>
+                    <td>O</td>
+                    <td>O&amp;#768;</td>
+                    <td>Ò</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;́</td>
+                    <td>O</td>
+                    <td>O&amp;#769;</td>
+                    <td>Ó</td>
+                </tr>
+                <tr>
+                    <td>̂</td>
+                    <td>O</td>
+                    <td>O&amp;#770;</td>
+                    <td>Ô</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;̃</td>
+                    <td>O</td>
+                    <td>O&amp;#771;</td>
+                    <td>Õ</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr/>
+    <div class="container">
+        <h1>Symbols</h1>
+        <h3>Some Mathematical Symbols Supported by HTML</h3>
+        <a href="https://www.w3schools.com/charsets/ref_utf_math.asp">Full Math Reference</a>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Char</th>
+                    <th>Number</th>
+                    <th>Entity</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>∀</td>
+                    <td>&amp;#8704;</td>
+                    <td>&amp;forall;</td>
+                    <td>FOR ALL</td>
+                </tr>
+                <tr>
+                    <td>∂</td>
+                    <td>&amp;#8706;</td>
+                    <td>&amp;part;</td>
+                    <td>PARTIAL DIFFERENTIAL</td>
+                </tr>
+                <tr>
+                    <td>∃</td>
+                    <td>&amp;#8707;</td>
+                    <td>&amp;exist;</td>
+                    <td>THERE EXISTS</td>
+                </tr>
+                <tr>
+                    <td>∅</td>
+                    <td>&amp;#8709;</td>
+                    <td>&amp;empty;</td>
+                    <td>EMPTY SETS</td>
+                </tr>
+                <tr>
+                    <td>∇</td>
+                    <td>&amp;#8711;</td>
+                    <td>&amp;nabla;</td>
+                    <td>NABLA</td>
+                </tr>
+                <tr>
+                    <td>∈</td>
+                    <td>&amp;#8712;</td>
+                    <td>&amp;isin;</td>
+                    <td>ELEMENT OF</td>
+                </tr>
+                <tr>
+                    <td>∉</td>
+                    <td>&amp;#8713;</td>
+                    <td>&amp;notin;</td>
+                    <td>NOT AN ELEMENT OF</td>
+                </tr>
+                <tr>
+                    <td>∋</td>
+                    <td>&amp;#8715;</td>
+                    <td>&amp;ni;</td>
+                    <td>CONTAINS AS MEMBER</td>
+                </tr>
+                <tr>
+                    <td>∏</td>
+                    <td>&amp;#8719;</td>
+                    <td>&amp;prod;</td>
+                    <td>N-ARY PRODUCT</td>
+                </tr>
+                <tr>
+                    <td>∑</td>
+                    <td>&amp;#8721;</td>
+                    <td>&amp;sum;</td>
+                    <td>N-ARY SUMMATION</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr/>
+
+        <h3>Some Greek Letters Supported by HTML</h3>
+        <a href="https://www.w3schools.com/charsets/ref_utf_greek.asp">Full Greek Reference</a>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Char</th>
+                    <th>Number</th>
+                    <th>Entity</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Α</td>
+                    <td>&amp;#913;</td>
+                    <td>&amp;Alpha;</td>
+                    <td>GREEK CAPITAL LETTER ALPHA</td>
+                </tr>
+                <tr>
+                    <td>Β</td>
+                    <td>&amp;#914;</td>
+                    <td>&amp;Beta;</td>
+                    <td>GREEK CAPITAL LETTER BETA</td>
+                </tr>
+                <tr>
+                    <td>Γ</td>
+                    <td>&amp;#915;</td>
+                    <td>&amp;Gamma;</td>
+                    <td>GREEK CAPITAL LETTER GAMMA</td>
+                </tr>
+                <tr>
+                    <td>Δ</td>
+                    <td>&amp;#916;</td>
+                    <td>&amp;Delta;</td>
+                    <td>GREEK CAPITAL LETTER DELTA</td>
+                </tr>
+                <tr>
+                    <td>Ε</td>
+                    <td>&amp;#917;</td>
+                    <td>&amp;Epsilon;</td>
+                    <td>GREEK CAPITAL LETTER EPSILON</td>
+                </tr>
+                <tr>
+                    <td>Ζ</td>
+                    <td>&amp;#918;</td>
+                    <td>&amp;Zeta;</td>
+                    <td>GREEK CAPITAL LETTER ZETA</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr/>
+
+
+        <h3>Some Other Entities Supported by HTML</h3>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Char</th>
+                    <th>Number</th>
+                    <th>Entity</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>©</td>
+                    <td>&amp;#169;</td>
+                    <td>&amp;copy;</td>
+                    <td>COPYRIGHT SIGN</td>
+                </tr>
+                <tr>
+                    <td>®</td>
+                    <td>&amp;#174;</td>
+                    <td>&amp;reg;</td>
+                    <td>REGISTERED SIGN</td>
+                </tr>
+                <tr>
+                    <td>€</td>
+                    <td>&amp;#8364;</td>
+                    <td>&amp;euro;</td>
+                    <td>EURO SIGN</td>
+                </tr>
+                <tr>
+                    <td>™</td>
+                    <td>&amp;#8482;</td>
+                    <td>&amp;trade;</td>
+                    <td>TRADEMARK</td>
+                </tr>
+                <tr>
+                    <td>←</td>
+                    <td>&amp;#8592;</td>
+                    <td>&amp;larr;</td>
+                    <td>LEFTWARDS ARROW</td>
+                </tr>
+                <tr>
+                    <td>↑</td>
+                    <td>&amp;#8593;</td>
+                    <td>&amp;uarr;</td>
+                    <td>UPWARDS ARROW</td>
+                </tr>
+                <tr>
+                    <td>→</td>
+                    <td>&amp;#8594;</td>
+                    <td>&amp;rarr;</td>
+                    <td>RIGHTWARDS ARROW</td>
+                </tr>
+                <tr>
+                    <td>↓</td>
+                    <td>&amp;#8595;</td>
+                    <td>&amp;darr;</td>
+                    <td>DOWNWARDS ARROW</td>
+                </tr>
+                <tr>
+                    <td>♠</td>
+                    <td>&amp;#9824;</td>
+                    <td>&amp;spades;</td>
+                    <td>BLACK SPADE SUIT</td>
+                </tr>
+                <tr>
+                    <td>♣</td>
+                    <td>&amp;#9827;</td>
+                    <td>&amp;clubs;</td>
+                    <td>BLACK CLUB SUIT</td>
+                </tr>
+                <tr>
+                    <td>♥</td>
+                    <td>&amp;#9829;</td>
+                    <td>&amp;hearts;</td>
+                    <td>BLACK HEART SUIT</td>
+                </tr>
+                <tr>
+                    <td>♦</td>
+                    <td>&amp;#9830;</td>
+                    <td>&amp;diams;</td>
+                    <td>BLACK DIAMOND SUIT</td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+        <a href="https://www.w3schools.com/charsets/ref_utf_currency.asp">Full Currency Reference</a> <br>
+        <a href="https://www.w3schools.com/charsets/ref_utf_arrows.asp">Full Arrows Reference</a> <br>
+        <a href="https://www.w3schools.com/charsets/ref_utf_symbols.asp">Full Symbols Reference</a> <br>
+    </div>
+    <hr/>
+    <div class="container">
+        <h1>Emojis</h1>
+
+
+        <table class="table table-striped table-hover">
+            <tbody>
+                <tr>
+                    <th>Emoji</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>🗻</td>
+                    <td>#128507;</td>
+                </tr>
+                <tr>
+                    <td>🗼</td>
+                    <td>#128508;</td>
+                </tr>
+                <tr>
+                    <td>🗽</td>
+                    <td>#128509;</td>
+                </tr>
+                <tr>
+                    <td>🗾</td>
+                    <td>#128510;</td>
+                </tr>
+                <tr>
+                    <td>🗿</td>
+                    <td>#128511;</td>
+                </tr>
+                <tr>
+                    <td>😀</td>
+                    <td>#128512;</td>
+                </tr>
+                <tr>
+                    <td>😁</td>
+                    <td>#128513;</td>
+                </tr>
+                <tr>
+                    <td>😂</td>
+                    <td>#128514;</td>
+                </tr>
+                <tr>
+                    <td>😃</td>
+                    <td>#128515;</td>
+                </tr>
+                <tr>
+                    <td>😄</td>
+                    <td>#128516;</td>
+                </tr>
+                <tr>
+                    <td>😅</td>
+                    <td>#128517;</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <a href="https://www.w3schools.com/charsets/ref_emoji.asp">Full HTML Emoji Reference.</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+nav,
+nav ul,
+nav li,
+nav a {
+	/*thiết lập các thông số về lề đường kẻ*/
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+nav {
+	height: 40px; /*độ cao*/
+	background: #4c4e5a; /*màu nền*/
+	/*tô màu gradient áp dụng theo từng loại trình duyệt*/
+	background: -webkit-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);/*Safari 5.1 to 6.0*/
+	background: -moz-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);/*Firefox 3.6 to 15*/
+	background: -o-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);/*Opera 11.6 to 12.0*/
+	background: linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+	/*tạo bo tròn*/
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+nav ul li {
+	position: relative;
+	list-style: none;
+	float: left;
+	display: block;
+	height: 40px;
+}
+nav ul li a {
+	display: block;/*hiển thị dạng khối*/
+	padding: 0 14px;/*trên dưới =0,trái phải =14*/
+	margin: 6px 0;
+	line-height: 28px;
+	text-decoration: none;
+	/*tạo đường kẻ trái phải*/
+	border-left: 1px solid #393942;
+	border-right: 1px solid #4f5058;
+	/*chọn chữ*/
+	font-family: harrington;
+	font-weight: bold;
+	font-size: 13px;
+	/*màu sắc*/
+	color: #f3f3f3;
+	text-shadow: 1px 1px 1px rgba(0,0,0,6);
+	/*hiệu ứng*/
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+/*bỏ đường kẻ ở phần tử đầu và phần tử cuối*/
+nav ul li:first-child a {border-left: none;}
+nav ul li:last-child a {border-right: none;}
+/*khi user hover đến phần tử*/
+nav ul li:hover > a {color: #8fde62;}
+/*định dạng hiển thị menu con*/
+ul.sanpham{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 60px;
+
+	opacity: 0;/*không nhìn thấy menu*/
+	background: #1f2024;
+
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+
+	-webkit-transition: opacity .25s ease .1s;
+	-moz-transition: opacity .25s ease .1s;
+	-o-transition: opacity .25s ease .1s;
+	-ms-transition: opacity .25s ease .1s;
+	transition: opacity .25s ease .1s;
+}
+/*hiển thị menu sub khi hover đén mục con*/
+nav ul li:hover>ul.sanpham{
+	opacity: 10;
+	height: auto;
+}
+/*bỏ đường kẻ trong menu con*/
+.sanpham li a{
+	border: none;
+}
+/*tạo đường kẻ ngang*/
+.sanpham li{
+	width: 60px;
+	border-bottom: 1px solid #393942;
+}
+/*bỏ đường kẻ ngang ở phàn tử cuối cùng*/
+.sanpham li:last-child{border-bottom: none;}
+/*định dạng phần tử trong menu con*/
+.sanpham li a{
+	width: 60px;
+	padding: 4px 0px 40px;
+	margin: 0;
+	border: none;
+}
+/*tạo icon cho sanpham*/
+.sanpham a.css3{background: url(icon1.png) no-repeat 3px center;}
+.sanpham a.html5{background: url(icon2.png) no-repeat 3px center;}
+.sanpham a.php{background: url(icon3.png) no-repeat 3px center;}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*định dạng hiển thị menu con*/
+ul.dichvu{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 200px;
+
+	opacity: 0;/*không nhìn thấy menu*/
+	background: #1f2024;
+
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+
+	-webkit-transition: opacity .25s ease .1s;
+	-moz-transition: opacity .25s ease .1s;
+	-o-transition: opacity .25s ease .1s;
+	-ms-transition: opacity .25s ease .1s;
+	transition: opacity .25s ease .1s;
+}
+/*hiển thị menu sub khi hover đén mục con*/
+nav ul li:hover>ul.dichvu{
+	opacity: 10;
+	height: auto;
+}
+/*bỏ đường kẻ trong menu con*/
+.dichvu li a{
+	border: none;
+}
+/*tạo đường kẻ ngang*/
+.dichvu li{
+	width: 200px;
+	border-bottom: 1px solid #393942;
+}
+/*bỏ đường kẻ ngang ở phàn tử cuối cùng*/
+.dichvu li:last-child{border-bottom: none;}
+/*định dạng phần tử trong menu con*/
+.dichvu li a{
+	width: 200px;
+	padding: 4px 0px 40px;
+	margin: 0;
+	border: none;
+}
+/*tạo icon cho submenu*/
+.dichvu a.hocmienphi{background: url(icon1.png) no-repeat 3px center;}
+.dichvu a.hoccophi{background: url(icon2.png) no-repeat 3px center;}
+.dichvu a.hoidap{background: url(icon3.png) no-repeat 3px center;}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*định dạng hiển thị menu con*/
+ul.gioithieu{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 110px;
+
+	opacity: 0;/*không nhìn thấy menu*/
+	background: #1f2024;
+
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+
+	-webkit-transition: opacity .25s ease .1s;
+	-moz-transition: opacity .25s ease .1s;
+	-o-transition: opacity .25s ease .1s;
+	-ms-transition: opacity .25s ease .1s;
+	transition: opacity .25s ease .1s;
+}
+/*hiển thị menu sub khi hover đén mục con*/
+nav ul li:hover>ul.gioithieu{
+	opacity: 10;
+	height: auto;
+}
+/*bỏ đường kẻ trong menu con*/
+.gioithieu li a{
+	border: none;
+}
+/*tạo đường kẻ ngang*/
+.gioithieu li{
+	width: 110px;
+	border-bottom: 1px solid #393942;
+}
+/*bỏ đường kẻ ngang ở phàn tử cuối cùng*/
+.gioithieu li:last-child{border-bottom: none;}
+/*định dạng phần tử trong menu con*/
+.gioithieu li a{
+	width: 110px;
+	padding: 4px 0px 40px;
+	margin: 0;
+	border: none;
+}
+/*tạo icon cho submenu*/
+.gioithieu a.tieusu{background: url(icon1.png) no-repeat 3px center;}
+.gioithieu a.thanhtich{background: url(icon2.png) no-repeat 3px center;}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*định dạng hiển thị menu con*/
+ul.lienhe{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 130px;
+
+	opacity: 0;/*không nhìn thấy menu*/
+	background: #1f2024;
+
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+
+	-webkit-transition: opacity .25s ease .1s;
+	-moz-transition: opacity .25s ease .1s;
+	-o-transition: opacity .25s ease .1s;
+	-ms-transition: opacity .25s ease .1s;
+	transition: opacity .25s ease .1s;
+}
+/*hiển thị menu sub khi hover đén mục con*/
+nav ul li:hover>ul.lienhe{
+	opacity: 10;
+	height: auto;
+}
+/*bỏ đường kẻ trong menu con*/
+.lienhe li a{
+	border: none;
+}
+/*tạo đường kẻ ngang*/
+.lienhe li{
+	width: 130px;
+	border-bottom: 1px solid #393942;
+}
+/*bỏ đường kẻ ngang ở phàn tử cuối cùng*/
+.lienhe li:last-child{border-bottom: none;}
+/*định dạng phần tử trong menu con*/
+.lienhe li a{
+	width: 130px;
+	padding: 4px 0px 40px;
+	margin: 0;
+	border: none;
+}
+/*tạo icon cho submenu*/
+.lienhe a.fb{background: url(icon1.png) no-repeat 3px center;}
+.lienhe a.ytb{background: url(icon2.png) no-repeat 3px center;}
+.lienhe a.gmail{background: url(icon3.png) no-repeat 3px center;}

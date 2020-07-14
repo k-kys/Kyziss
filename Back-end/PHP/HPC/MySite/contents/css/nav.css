@@ -1,0 +1,21 @@
+
+nav{
+	background-color: #484848;
+	height: 50px;
+}
+nav ul li{
+	list-style: none;
+	float: left;
+	border-right: 1 solid #ccc;
+}
+nav ul li a{
+	display: block;
+	line-height: 50px;
+	padding: 0px 25px;
+	color: #fff;
+	text-decoration: none;
+}
+nav ul li:hover a{
+	background-color: red;
+	color: yellow;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>This in Javascript</title>
+</head>
+<body>
+    <!-- Đối tượng this chính là đối tượng hiện tại đang được sử dụng hoặc đang truy cập tới. Ví dụ khi bạn viết một hành động cho sự kiện click thì nếu trong hành động đó có sử dụng this lúc này this chính là thẻ HTML mà ta click. 
+
+    Ví dụ: Đối tượng this trong event
+    <input type="button" class="btn" id="btn" value="Button"/>
+    <script>
+        // Lấy đối tượng
+        var button = document.getElementById('btn');
+        
+        // Gán sự kiện
+        button.addEventListener("click", function(){
+        // Lấy thuộc tính type của đối tượng đang xử lý chính là button có id="btn"
+            alert('Type of button : ' + this.type);
+        });
+    </script>
+    Như vậy trong ví dụ này this chính là thẻ HTML mà chúng ta đang xử lý và đó chính là thẻ HTML có id="btn", vì vậy bạn có thể sử dụng DOM để lấy các giá trị thuộc tính hoặc gán thêm sự kiện khác vẫn được. -->
+
+
+
+
+
+
+
+
+    
+    Ví dụ: Truyền đối tượng this trong HTML
+<script language="javascript">
+    function show_type(obj)
+    {
+        alert(obj.type);
+    }
+</script>
+<input type="button" onclick="show_type(this)" value="Check" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

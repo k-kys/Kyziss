@@ -1,0 +1,39 @@
+nav#mainNav{
+	width: 200px;/*chiều rộng nav*/
+	background: #ccc;
+}
+nav#mainNav ul{
+	list-style: none;/*bỏ style mặc định của ul li*/
+	padding: 0;/*bỏ padding của ul*/
+	margin: 0;/*bỏ margin của ul*/
+}
+nav#mainNav ul li{
+	border-bottom: solid 1px #fff;/*thiết lập đường kẻ cho li*/
+	position: relative;/*hiển thị vị trí tương đối*/
+}
+nav#mainNav ul li a{
+	text-decoration: none;/*bỏ gạch chân thẻ a*/
+	display: block;/*hiển thị khối cho thẻ a*/
+	width: 85%;/*đặt chiều rộng a bằng 85% so với nav*/
+	padding: 10px 15px;/*khoảng cách cho nội dung thẻ a*/
+}
+.selected,/*thiết lập class cho thẻ a*/
+nav#mainNav ul li a:hover{/*di chuột vào thẻ a*/
+	background: red;
+	color: #fff;
+}
+/*menu cấp 2*/
+nav#mainNav ul li>ul{
+	position: absolute;/*hiển thị tuyệt đối theo menu cha*/
+	margin-left: 200px;/*hiển thị sang trái 200px*/ 
+	width: 200px; /*độ rộng menu cấp 2*/
+	background: #666;
+	top: 0px;/*hiển thị top0*/
+	visibility: hidden;/*mặc định ẩn khi chưa di chuột vào*/
+}
+nav#mainNav ul li>ul li{
+	border-left: solid 1px #fff;
+}
+nav#mainNav ul li:hover>ul{
+	visibility: visible;/*khi di chuột vào thẻ li,toàn bộ ul bên trong hiển thị*/
+}

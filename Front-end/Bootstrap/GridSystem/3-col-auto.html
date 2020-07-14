@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>col-auto, col-sm-auto</title>
+  </head>
+  <body>
+    <h3>3- col,... col-auto,...</h3>
+
+    <h5>col, col-sm,..</h5>
+    <!-- Ví dụ dưới đây là cách sử dụng các lớp col, col-sm, col-md, col-lg, col-xl (Không chỉ định chiều rộng) -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col bg-primary">
+          <p>col</p>
+        </div>
+        <div class="col bg-secondary">
+          <p>col</p>
+        </div>
+        <div class="col bg-success">
+          <p>col</p>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col bg-primary">
+          <p>col</p>
+        </div>
+        <div class="col bg-secondary">
+          <p>col</p>
+        </div>
+        <div class="col-2 bg-success">
+          <p>col-2</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <hr />
+
+    <h5>col-auto, col-sm-auto, col-md-auto, col-lg-auto, col-xl-auto</h5>
+    <!-- Các phần tử (element) sử dụng lớp *-auto sẽ có chiều rộng tự động dựa trên độ dài nội dung của nó. -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-auto bg-primary">
+          <p>col-auto</p>
+          Long content .... .... .. .. .. ...... .....
+        </div>
+        <div class="col-auto bg-secondary">
+          <p>col-auto</p>
+          Short Content
+        </div>
+        <div class="col-2 bg-success">
+          <p>col-2</p>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-auto bg-primary">
+          <p>col-auto</p>
+          Long content .... .... .. .. .. ...... ..... Long content .... .... ..
+          .. .. ...... .....
+        </div>
+        <div class="col-auto bg-secondary">
+          <p>col-auto</p>
+          Short Content
+        </div>
+        <div class="col-2 bg-success">
+          <p>col-2</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

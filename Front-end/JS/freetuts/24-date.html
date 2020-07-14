@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Date</title>
+<script>
+    // Hàm khởi tạo đồng hồ
+    function startTime()
+    {
+        // Lấy Object ngày hiện tại
+        var today = new Date();
+        
+        // Giờ, phút, giây hiện tại
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+
+        // Chuyển đổi sang dạng 01, 02, 03
+        m = checkTime(m);
+        s = checkTime(s);
+
+        // Ghi ra trình duyệt
+        document.getElementById('timer').innerHTML = h + ":" + m + ":" + s;
+
+        // Dùng hàm setTimeout để thiết lập gọi lại 0.5 giây / lần
+        var t = setTimeout(function() {
+            startTime();
+        }, 500);
+    }
+     
+    // Hàm này có tác dụng chuyển những số bé hơn 10 thành dạng 01, 02, 03, ...
+    function checkTime(i)
+    {
+        if (i < 10) {
+        i = "0" + i;
+        }
+        return i;
+    }
+  </script>
+</head>
+<body onload="startTime()">
+    <!-- Đồng hồ load từ giờ của Client -->
+    <div id="timer"></div>
+
+
+
+<!-- <script>
+var dateObj = new Date();   // khởi tạo object Date()
+var dateObj = new Date(2013, 11, 20);
+document.write(dateObj);
+
+// Các cách khở tạo thông thường
+// Thời gian hiện tại
+new Date();
+ 
+// Tham số truyền vào là mili giây
+new Date(milliseconds);
+ 
+// Tham số truyền vào là chuỗi ngày tháng
+new Date(dateString);
+ 
+// Tham số truyền vào gồm
+//  - year:         năm
+//  - month:        tháng
+//  - day:          ngày
+//  - hours:        giờ
+//  - minutes:      phút
+//  - seconds:      giây
+//  - milliseconds: mini giây
+new Date(year, month, day, hours, minutes, seconds, milliseconds);
+
+// Định dạng ISO
+var ISO_1 = new Date("2014-11-20");
+var ISO_2 = new Date("2014-11");
+var ISO_3 = new Date("2014");
+
+// Định dạng Long
+var LONG_1 = new Date("Mar 25 2015");
+var LONG_2 = new Date("2015 Mar 25");
+var LONG_3 = new Date("25 2015 Mar");
+
+// Định dạng Short
+var SHORT_1 = new Date("03-25-2015");
+var SHORT_2 = new Date("03/25/2015");
+var SHORT_3 = new Date("2015/03/25");
+var SHORT_4 = new Date("2015-03-25");
+
+// Định dạng đầy đủ
+var d = new Date("Wed Mar 25 2015 09:56:24 GMT+0100 (W. Europe Standard Time)");
+
+
+
+// CÁC HÀM XỬ LÝ DATE
+
+getDate() lấy ngày (1 - 31)
+getDay() lấy ngày trong tuần (0-6), phải cộng lên một thì mới có kết quả chính xác vì nó tính từ 0.
+getFullYear() lấy năm đầy đủ (YYYY)
+getYear() lấy năm 2 số cuối (YY)
+getHours() lấy số giờ (0 - 23)
+getMiliSeconds() lấy số mili giây (0 - 999)
+getMinutes() lấy số phút (0 - 59)
+getMonth() lấy tháng (0 - 11)
+getSeconds() lấy số giây (0 - 59)
+getTime() thời gian đã được convert sang dạng miliseconds.
+
+
+setDate() thiết lập ngày (1 - 31)
+setFullYear() thiết lập năm đầy đủ (YYYY)
+setYear() thiết lậpnăm 2 số cuối (YY)
+setHours() thiết lập số giờ (0 - 23)
+setMiliSeconds() thiết lập số mili giây (0 - 999)
+setMinutes() thiết lập số phút (0 - 59)
+setMonth() thiết lập tháng (0 - 11)
+setSeconds() thiết lập số giây (0 - 59)
+setTime() thiết lập thời gian đã được convert sang dạng miliseconds. Nó ảnh hưởng tới tất cả các giá trị còn lại bởi vì setTime() là hàm thiết lập thời gian đầy đủ đã chuyển sang dạng miniseconds.
+
+
+
+
+</script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

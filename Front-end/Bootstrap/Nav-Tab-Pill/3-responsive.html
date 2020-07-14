@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive Nav</title>
+  </head>
+  <body>
+    <h3>3- Responsive Nav .flex-column</h3>
+    <!-- Mặc định Bootstrap Nav là một Menu nằm ngang. Nhưng bạn có thể làm cho nó hiển thị thẳng đứng bằng cách sử dụng lớp .flex-column (Đây là một lớp tiện ích được sử dụng trong rất nhiều tình huống khác nhau). -->
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Javascript</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Css</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Bootstrap</a>
+      </li>
+    </ul>
+    <hr />
+    <h5>flex-column flex-sm-row (Menu ngang chuyển sang menu dọc)</h5>
+    <!-- Nếu bạn muốn có một Menu nằm ngang, có thể chuyển sang thẳng đứng khi chiều rộng màn hình nhỏ hơn, bạn có thể kết hợp lớp .flex-column với một trong các lớp sau:
+.flex-sm-row
+.flex-md-row
+.flex-lg-row
+.flex-xl-row
+- - - - - - - - - - - - - - - - 
+.flex-column
+.flex-sm-row	Nếu chiều rộng màn hình >= 567px, Nav sẽ nằm ngang. Ngược lại Nav sẽ hiển thị thẳng đứng.
+
+.flex-column
+.flex-md-row	Nếu chiều rộng màn hình >= 768px, Nav sẽ nằm ngang. Ngược lại Nav sẽ hiển thị thẳng đứng.
+
+.flex-column
+.flex-lg-row	Nếu chiều rộng màn hình >= 992px, Nav sẽ nằm ngang. Ngược lại Nav sẽ hiển thị thẳng đứng.
+
+.flex-column
+.flex-xl-row	Nếu chiều rộng màn hình >= 1200px, Nav sẽ nằm ngang. Ngược lại Nav sẽ hiển thị thẳng đứng. -->
+    <ul class="nav flex-column flex-lg-row">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Javascript</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Css</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Bootstrap</a>
+      </li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

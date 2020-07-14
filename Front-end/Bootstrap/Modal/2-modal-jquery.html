@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Modal & Jquery</title>
+  </head>
+  <body>
+    <h5>
+      Bạn có thể sử dụng JQuery để tương tác với Modal, chẳng hạn ẩn hoặc hiện
+      Modal.
+    </h5>
+    <p>
+      $('#myModal').modal('toggle');<br />
+      $('#myModal').modal('show');<br />
+      $('#myModal').modal('hide');
+    </p>
+    <h5>Hoặc đầy đủ hơn:</h5>
+    <p>
+        <pre>
+        $('#myModal').modal(options); 
+        // Example: 
+        var options = { 
+            'backdrop' :'static', 
+            'keyboard' : true, 
+            'show' : true, 
+            'focus' : false }
+        </pre>
+    </p>
+    <!-- 
+backdrop	: Tùy chọn này có hai giá trị là true hoặc static. Mặc định là true, có nghĩa là người dùng có thể nhấn vào nền (background) để đóng Modal.
+keyboard	: Tùy chọn này có hai giá trị là true hoặc false. Mặc định là false, nếu là true người dùng có thể đóng Modal bằng cách nhấn nút ESC.
+show	: Tùy chọn này có 2 giá trị là true hoặc false. Dùng để hiển thị hoặc ẩn Modal.
+focus	: Tùy chọn này có 2 giá trị là true hoặc false, mặc định là false. Nếu là true, Modal sẽ được focus khi nó được khởi tạo.
+     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+nav ul li{
+	list-style: none;
+	height: 50px;
+}
+#login{
+	width: 150px;
+	margin: 15px 40%;
+}
+a{
+	margin: 15px 40%;
+}

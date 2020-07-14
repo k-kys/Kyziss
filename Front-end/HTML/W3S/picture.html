@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Picture Element</title>
+</head>
+<body>
+
+    <!-- Phần tử <hình ảnh> chứa một số phần tử <nguồn>, mỗi phần tử tham chiếu đến các nguồn hình ảnh khác nhau. Bằng cách này, trình duyệt có thể chọn hình ảnh phù hợp nhất với chế độ xem và / hoặc thiết bị hiện tại. -->
+        <h2>The picture Element</h2>
+
+        <picture>
+          <source media="(min-width: 1000px)" srcset="https://www.w3schools.com/html/img_food.jpg">
+          <source media="(min-width: 700px)" srcset="https://www.w3schools.com/html/img_car.jpg">
+          <img src="https://www.w3schools.com/html/img_girl.jpg" style="width:auto;">
+        </picture>
+<p>
+    Thay đổi kích thước trình duyệt để xem các phiên bản khác nhau của tải hình ảnh ở các kích thước khung nhìn khác nhau. Trình duyệt tìm phần tử nguồn đầu tiên trong đó truy vấn media khớp với chiều rộng khung nhìn hiện tại của người dùng và tìm nạp hình ảnh được chỉ định trong thuộc tính srcset. <br/>
+    Phần tử img được yêu cầu làm thẻ con cuối cùng của khối khai báo picture. Phần tử img được sử dụng để cung cấp khả năng tương thích ngược cho các trình duyệt không hỗ trợ thành phần picture hoặc nếu không có thẻ nguồn nào khớp. <br/>
+    Lưu ý: Phần tử hình ảnh không được hỗ trợ trong IE12 trở về trước hoặc Safari 9.0 trở về trước.
+</p>
+        <hr/>
+
+<h3>When to use the Picture Element ?</h3>
+<br/>
+<p>
+- Nếu bạn có một màn hình nhỏ hoặc thiết bị, không cần thiết phải tải một tệp hình ảnh lớn. Trình duyệt sẽ sử dụng phần tử <source> đầu tiên với các giá trị thuộc tính phù hợp và bỏ qua bất kỳ phần tử nào sau đó.
+<br/>
+- Một số trình duyệt hoặc thiết bị có thể không hỗ trợ tất cả các định dạng hình ảnh. Bằng cách sử dụng phần tử <hình ảnh>, bạn có thể thêm hình ảnh của tất cả các định dạng và trình duyệt sẽ sử dụng định dạng đầu tiên mà nó nhận ra và bỏ qua bất kỳ điều nào sau đó.
+</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

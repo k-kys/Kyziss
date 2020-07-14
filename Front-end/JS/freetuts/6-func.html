@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Function</title>
+</head>
+<body>
+<script>
+    // Tạo hàm ktra số chẵn lẻ
+// function check_number(number)
+// {
+//     if (number % 2 == 0){
+//         document.write(number + ' là số chẵn');
+//         document.write("<br/>")
+//     }
+//     else {
+//         document.write(number + ' là số lẻ');
+//         document.write("<br/>")
+//     }
+// }
+//  
+// Sử dụng hàm kiểm tra cho 5 số
+// check_number(1);
+// check_number(2);
+// check_number(3);
+// check_number(4);
+// check_number(5);
+
+
+// function showMessage(message)
+// {
+//    // Nếu message không được truyền vào hoặc giá trị nó là rỗng thì sẽ được thay thế bằng giá trị 'Không có tin nhắn'
+//    message = message || 'Không có tin nhắn <br/>';
+//    document.write(message);
+// }
+// // Cách 1: không truyền tham số
+// showMessage();
+// // Cách 2: Truyền tham số
+// showMessage('Chào mừng bạn đến với freetuts.net');
+
+
+
+// khai báo hàm ktra năm nhuận
+function kiem_tra_nam_nhuan(nam)
+{
+    // nếu năm chia hết cho 100
+    // thì kiểm tra nó có chia hết cho 400 hay không
+    if (nam % 100 == 0)
+    {
+        // nêu chia hết cho 400 thì là năm nhuận
+        if (nam % 400 == 0){
+            return true;
+        }
+        else { // ngược lại không phải năm nhuận
+            return false;
+        }
+    }
+    else if (nam % 4 == 0){ // trường hợp chia hết cho 4 thì là năm nhuận
+        return true;
+    }
+    else { // cuối cùng trường hợp không phải năm nhuận
+        return false;
+    }
+}
+// sử dụng
+var flag = kiem_tra_nam_nhuan(7);
+ 
+if (flag){
+    alert('là năm nhuận');
+}
+else {
+    alert('không phải là năm nhuận');
+}
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

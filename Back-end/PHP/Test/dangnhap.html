@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Đăng nhập hệ thống</title>
+</head>
+<body>
+	<form action="xulydangnhap.php" method="post" name="dangnhap">
+		<table width="500" height="175" align="center" cellpadding="3" cellspacing="3" >
+			<tr>
+				<td colspan="3">Thông tin đăng nhập khách hàng</td>
+			</tr>
+			<tr>
+				<td width="150" rowspan="4" align="center" valign="middle"><img src="hpc.png" width="150" height="142"> </td>
+				<td width="150" align="right" valign="middle">Tài khoản:</td>
+				<td width="200"><input type="text" name="taikhoan" id="taikhoan"></td>
+			</tr>
+			<tr>
+				<td width="150" align="right" valign="middle">Mật khẩu:</td>
+				<td width="200"><input type="password" name="matkhau" id="matkhau"></td>
+			</tr>
+			<tr>
+				<td width="150">&nbsp;</td>
+				<td width="200"><input type="checkbox" name="ghinho" id="ghinho"><label for="ghinho">Ghi nhớ</label></td>
+			</tr>
+			<tr>
+				<td width="150" align="right"><input type="submit" name="submit" id="submit" value="Đăng nhập"></td>
+				<td width="200"><input type="reset" name="reset" id="reset" value="Nhập lại"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

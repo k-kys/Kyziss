@@ -1,0 +1,33 @@
+
+tr th {
+	background: #99CCFF;
+	text-align: center;
+	border-radius: 10px; 
+}
+#tieude td div{
+	background: #444444;
+	color: white;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	text-align: center;
+	border-style: solid;
+	border-color: #99CC00;
+	border-bottom-style: none;
+	border-spacing: 10px;
+	border-width: 2px;
+}
+tr td form {
+	padding: 5px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-color: #99CC00;
+	border-style: solid;
+	border-top-style: none;
+	border-width: 2px;
+	display: block;
+	
+}
+
+#form2 {
+	height: 255px;
+}

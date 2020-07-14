@@ -1,0 +1,9 @@
+Thiết kế form để thực hiện tính toán các phép toán số học
+ +; -; *; / ; %
+Trên form bao gồm:
+input để nhập số a;
+input để nhập số b;
+select: chọn phép tính
+input submit để tính toán
+input để hiển thị kết quả của phép tính
+

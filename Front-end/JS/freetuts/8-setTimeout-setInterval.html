@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+<title>SetTimeout & setInterval</title>
+</head>
+<body>
+<script>
+// Hàm setTimeout() dùng để thiết lập một khoảng thời gian nào đó sẽ thực hiện một nhiệm vụ nào đó và nó chỉ thực hiện đúng một lần.
+
+// Cú pháp: setTimeout(function, time)
+
+// Trong đó:
+
+// function: là nội dung cần thực hiện, đây là một hàm
+// time: là khoảng thời gian bao nhiêu (tính bằng mili giây) thì function đó sẽ thực hiện
+
+
+    //  Sau 3 giây thì xuất hiện câu chào lên màn hình
+    // setTimeout(function(){
+    //     alert("Chào mừng bạn đến với freetuts.net");
+    // }, 3000);
+
+    // var do_alert = function(){
+    //     alert("Chào mừng bạn đến với freetuts.net");
+    // };
+    // setTimeout(do_alert, 3000);
+
+// Giả sử bạn xây dựng chức năng sau 3 giây thì sẽ xuất hiện thông báo, tuy nhiên sau 2 giây chương trình muốn hủy bỏ thì phải làm thế nào? Lúc này bạn phải sử dụng hàm clearTimeout().
+
+// Tham số truyền vào hàm clearTimeout() là đối tượng setTimeout() nên lúc này ban phải đặt hàm setTimeout() vào một biến cụ thể.
+    // function clearAlert() {
+    //     clearTimeout(do_alert);
+    // }
+</script>
+<!-- button sẽ xóa bỏ lệnh setTimeout -->
+<!-- <input type="button" onclick="clearAlert()" value="Clear Alert" /> -->
+
+<script>
+    // Hàm setInterval() có cú pháp và chức năng giống như hàm setTimeout(), tuy nhiên với hàm setInterval() thì số lần thực hiện lã mãi mãi.
+
+    // Cứ sau 3 giây thì xuất hiện câu chào một lần
+    // setInterval(function(){
+    //     alert("Chào mừng bạn đến với freetuts.net");
+    // }, 3000);
+
+
+    // Tương tự như hàm clearTimeout(), hàm clearInterval() sẽ xóa đi nhiệm vụ mà ta đã thiết lập trong hàm setInterval(), và ta cũng phải đặt setInterval() trong một biến thì mới clear được.
+
+    // Sử dụng hàm setInterval() để xuất câu chào lên màn hình và số lần xuất hiện chỉ 1 lần duy nhất
+    var interval_obj = setInterval(function(){
+        alert("Chào mừng bạn đến với freetuts.net");
+        clearInterval(interval_obj);
+    }, 3000);
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

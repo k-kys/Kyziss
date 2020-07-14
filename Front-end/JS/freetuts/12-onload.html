@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Onload</title>
+</head>
+<body>
+    <!-- Sự kiện onload có ý nghĩa rằng khi trình duyệt đã load xong mọi thứ (image, js, css) thì những đoạn code nằm bên trong đó mới được chạy. Có một lưu ý rằng nếu bạn sử dụng onload cho một thẻ HTML nào đó thì nó sẽ có tác dụng với thẻ HTML đó thôi nhưng nếu bạn dùng cho window thì nó sẽ có tác dụng cho toàn trang.
+
+    Hay nói cách khác những đoạn code nằm bên trong sự kiện onload sẽ được chạy sau cùng khi mà trình JS đã được biên dịch 1 lần. Chính vì vậy nếu trong sự kiện onload bạn gọi tới một hàm nào đó thì dù bạn đặt hàm đó phía trên hay phía dưới thì đều đúng, lý do là trình biên dịch đã thực hiện dịch 1 lần rồi nên hàm đó đã tồn tại. -->
+    
+<script>
+    document.write(1);
+ 
+ window.onload = function()
+ {
+    document.write(3);   
+ };
+  
+ document.write(2);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

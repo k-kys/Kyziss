@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Image Map</title>
+</head>
+<body>
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+    <!-- usemap === name of <map> -->
+        <!-- thẻ <map> có thể đặt bất cứ đâu, không nhất thiết sau hình ảnh -->
+    <map name="workmap">
+        <!-- area là vùng có thể nhấp -->
+        <!-- Các shape của area :
+                rect - vùng hình chữ nhật
+                circle  - vùng hình tròn
+                poly - vùng đa giác
+                default - xác định toàn bộ khu vực -->
+        <!-- Coordinates - Tọa độ
+                RECT - left, top, right, bottom - xác định từ lề trái và lề trên của ảnh.
+                    Các tọa độ đi theo cặp, một cho trục x và một cho trục y.
+                    Các tọa độ 34, 44 (left, top) được đặt 34 pixel từ lề trái và 44 pixel từ lề trên
+                    Các tọa độ 270, 350 (right, bottom) được đặt 270 pixel từ lề trái và 350 pixel từ lề trên
+
+                CIRCLE - x(cạnh trái ảnh đến tâm), y(cạnh trên ảnh đến tâm), bán kính 
+                    Để thêm một khu vực vòng tròn, trước tiên, xác định vị trí tọa độ của tâm của vòng tròn: 337, 300
+                    Sau đó chỉ định bán kính của vòng tròn: 44 pixel
+
+                POLY - tọa độ từng điểm nối thành vòng khép kín(A,B,C,D,A)
+                    Bước 1: Xác định số đỉnh của hình đa giác & vị trí của các đỉnh.
+                    Bước 2: Xác định hướng đi của các đỉnh để tạo thành một vùng khép kín.
+                    Bước 3: Xác định tọa độ của từng đỉnh.
+                    (cách xác định tọa độ của một đỉnh cũng giống như cách xác định tâm của hình tròn)
+                    Bước 4: Ghép tọa độ của các đỉnh lại thành giá trị của thuộc tính coords.
+
+                    Ví dụ: tọa độ A(100,50) , B(275,100) , C(250,300) , D(50,350)
+                    => coords(100,50, 275,100, 250,300, 50,350, 100,50) -->
+      <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+      <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+      <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+    </map>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.footer1 {
+	text-align: left;
+	margin-left: 75%;
+}
+/*div address {
+	text-align: left;
+	left: 30px;
+}*/
+
+div marquee {
+	direction: left;
+	width: 100%;
+	background-color: pink;
+	scroll-behavior: alternate;
+}

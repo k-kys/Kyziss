@@ -1,0 +1,106 @@
+<!-- 
+    FRONT-END: DOM manipulation, event, callback, AJAX call, JSON
+    NODEJS: require, async io, node package, npm
+    ES6  : () => {}, {... abc}, async/await, promise
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // document.write('Hello World') // in ra màn hình
+        // console.log('Hello, world') // in trong console
+
+        // var name = 'Khuong' // khai báo biến
+        // document.write(name) // xuất ra biến
+
+        // let firstNum = 5
+        // let second = 3
+        // document.write(firstNum + second)
+
+        // let first = 'Khương'
+        // let second = 'Trần'
+        // document.write(first + second)
+
+        /* Object */
+        // let khuong = {
+        //     name: 'Khương',
+        //     age: 20,
+        //     add: 'Hà Nội',
+        //     sing: function() {
+        //         document.write('Minh la Tran Khuong')
+        //     }
+        // }
+        // document.write('Tên: ' + khuong.name + '<br/>')
+        // document.write('Tuổi: ' + khuong.age + '<br/>')
+        // document.write('Địa chỉ: ' + khuong.add + '<br/>')
+        // document.write('Sing: '); khuong.sing()
+
+        /* Chuỗi STRING */
+        // let cauChao = 'Mình là Quang Khương'
+        // document.write(cauChao.length) // Độ dài chuỗi
+        // document.write(cauChao.split(' ')) // cắt chuỗi thành các phần tử array
+        // document.write(cauChao.substring(8,20)) // cắt chuỗi (từ sau vị trí 8 đến vị trí 20)
+        // document.write(cauChao.includes('là')) //check 1 từ có trong chuỗi hay không
+        
+        /* Array */
+        // const traiCay = new Array(4)
+        // traiCay[0] = 'Xoài'
+        // traiCay[1] = 'Bưởi'
+        // traiCay[2] = 'Cam'
+        // traiCay[3] = 'Quýt'
+        // console.log(traiCay)
+        // const traiCay = new Array('Xoai', 'Buoi', 'Cam', 'Quyt')
+        // console.log(traiCay[0]);
+        
+        /* Câu lệnh điều khiển IF..ELSE */
+        //If...Else
+        // const num= 10
+        // if (num > 5) {
+        //     console.log('Khương Trần');
+        // } else {
+        //     console.log('Số bé quá');
+        // }
+
+        // Switch...Case
+        // const input = 2
+        // switch (input) {
+        //     case 1:
+        //         console.log('1. Nhập sản phẩm');
+        //         break;
+        //     case 2:
+        //         console.log('2. In sản phẩm');
+        //         break;
+        //     default:
+        //         break;
+        // }
+
+        /* Vòng lặp */
+        const traiCay = ['Buoi', 'Xoai', 'Cam', 'Quyt']
+        // For - of
+        // for (const trai of traiCay) {
+        //     document.write(trai + '<br/>')
+        // }
+
+        // For - Loop
+        // for (let index = 0; index < traiCay.length; index++) {
+        //     console.log({index});
+        //     const trai = traiCay[index];
+        //     document.write(trai + '<br/>')
+        // }
+
+        /* FUNCTION */
+        function printToN(n) {
+            for (let index = 1; index <= n; index++) {
+                document.write(index + '<br/>')
+            }
+        }
+        printToN(5)
+
+    </script>
+</body>
+</html>

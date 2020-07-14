@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài kiểm tra Lập trình Web</title>
+	<link rel="stylesheet" href="ktra.css">
+</head>
+<body>
+	<table>
+		<tr>
+			<th colspan="2"><h2>Welcome to DEVMASTER.vn</h2></th>
+		</tr>
+		
+		<tr id="tieude">
+			<td><div>CHƯƠNG TRÌNH GỬI THƯ ĐIỆN TỬ</div></td>
+			<td><div>ĐĂNG NHẬP</div></td>
+		</tr>
+			
+		<tr>		
+			<td>
+				<form action="" id="form1" method="post" width="300">
+				
+					<b>Người Gửi:</b>
+					<input type="text" name="nguoigui" size="20"><b>(*)</b><br>
+
+					<b>Người Nhận:</b>
+					<input type="text" name="nguoinhan" size="20"><b>(*)</b><br>
+
+
+					<b>Tiêu đề thư:</b>
+					<input type="text" name="tieude" size="30"><b>(*)</b><br>
+
+
+		    		<b>Nội dung thư:</b>
+					<textarea name="noidung"cols="30" rows="5"></textarea><b>(*)</b><br>
+			
+					<b>Ngày Giải Quyết:</b>
+					<input type="date" name="ngay" size="20"><b>(*)</b><br>
+		    
+		    		<b>Cấp Độ:</b>
+					<select >
+						<option value="capdouutien">---Cấp Độ Ưu Tiên--- </option>
+						<option value="binhthương">Bình Thường</option>
+						<option value="gap"> Gấp</option>
+						<option value="quantrong">Quan trọng</option>
+					</select><b>(*)</b><br>
+
+					<b>Gửi Bộ phận:</b>
+					<input type="checkbox" name="pdaotao">
+					<label for="pdaotao">P Đào tạo</label>
+					<input type="checkbox" name="chamsochocvien">
+					<label for="chamsochocvien">P chăm sóc học viện</label><br>
+
+					<input type="submit" name="guingay" value="Gửi Ngay">
+					<input type="reset" name="lamlai" value="Làm lại">
+				</form>
+			</td>
+
+			<td>
+				<form action="" id="form2" method="post" width="200">
+					<b>Email:</b><br>
+					<input type="email" name="email" size="20"><br>
+					
+					<b>Mật khẩu:</b><br>
+					<input type="password" name="password" size="20"><br>
+
+					<input type="submit" name="dangnhap" value="Đăng nhập"><hr>
+				</form>
+			</td>
+		</tr>
+</table>
+</body>
+<footer>
+    <marquee direction="left" width="10%"><h6><sub>©2019 Trần Quang Khương K18.CNTT01</sub></h6></div>
+</footer>
+</html>

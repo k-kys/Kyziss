@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Class w-100</title>
+  </head>
+  <body>
+    <h2>Class w-100</h2>
+    <!-- Trong Bootstrap4, lớp w-100 làm cho phần tử (element) có chiều rộng lấp đầy .container (width = 100%), nó sẽ phân tách các phần tử bên trái và bên phải nó thành 2 dòng (row) khác nhau. Tuy nhiên về mặt bản chất tất cả các phần tử này vẫn có cùng một phần tử cha ( .row ).
+		
+		 -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col bg-primary">
+          col (1)
+        </div>
+        <div class="col bg-secondary">
+          col (2)
+        </div>
+
+        <div class="w-100"></div>
+
+        <div class="col bg-success">
+          col (3)
+        </div>
+        <div class="col-3 bg-danger">
+          col-3 (4)
+        </div>
+      </div>
+    </div>
+
+    <h5>
+      Với lớp .w-100 bạn có thể chuyển các phần tử đang hiển thị trên 2 dòng
+      thành 1 dòng, và ngược lại.
+    </h5>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col bg-primary">
+          <p>col (1)</p>
+        </div>
+        <div class="col bg-secondary">
+          <p>col (2)</p>
+        </div>
+
+        <!-- d-sm-none: display sm none -->
+        <div class="w-100 d-sm-none"></div>
+
+        <div class="col bg-success">
+          <p>col (3)</p>
+        </div>
+        <div class="col-3 bg-danger">
+          <p>col-3 (4)</p>
+        </div>
+        <div class="col bg-warning">
+          <p>col (5)</p>
+        </div>
+      </div>
+    </div>
+
+    <h5>
+      Bạn có thể thay đổi thứ tự các phần tử nếu chúng cùng thuộc một ".row".
+      Bạn không thể thay đổi thứ tự các phần tử nếu chúng nằm trên 2 ".row" khác
+      nhau.
+    </h5>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col order-sm-12 bg-primary">
+          <p>col (1)</p>
+          <p>order-sm-12</p>
+        </div>
+        <div class="col order-sm-11 bg-secondary">
+          <p>col (2)</p>
+          <p>order-sm-11</p>
+        </div>
+
+        <!-- d-sm-none: display sm none -->
+        <div class="w-100 d-sm-none"></div>
+
+        <div class="col order-sm-2 bg-success">
+          <p>col (3)</p>
+          <p>order-sm-2</p>
+        </div>
+        <div class="col-3 order-sm-3 bg-danger">
+          <p>col-3 (4)</p>
+          <p>order-sm-3</p>
+        </div>
+        <div class="col  order-sm-1 bg-warning">
+          <p>col (5)</p>
+          <p>order-sm-1</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+.btn-readmore{
+	padding: 8px 24px;
+	border: 2px solid black;
+	transition: 2.4s;
+	display: inline-block;
+	font-weight: bold;
+	cursor: pointer;
+	background: white;
+}
+
+.btn-readmore:hover{
+	background: red;
+	text-decoration: none;
+	padding: 8px 64px 8px 24px;
+	color: white;
+	transition: 0.4s;
+}
