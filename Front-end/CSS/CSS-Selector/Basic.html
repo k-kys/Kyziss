@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic CSS Selector</title>
+	<style type="text/css">
+		/*
+			1. BASIC CSS SELECTOR : sử dụng chọn element / class / id.
+		*/
+
+		/*Element Selector: Element. Nó chọn bất kỳ phần tử nào đó.*/
+		p{
+			color: blue;
+		}
+		div{
+			color: magenta;
+		}
+
+		/*Class Selector: .class. Nó chọn tất cả các phần tử có class đã cho.*/
+		.hello{
+			color: red;
+		}
+
+		/*ID Selector: #id. Nó chọn tất cả các phần tử có id đã cho.*/
+		#app{
+			color: red;
+		}
+
+		/*Universal selector: *. Nó chọn tất cả các phần tử.*/
+		*{
+			color: gray;
+		}
+	</style>
+</head>
+<body>
+	<h2> 1. Basic CSS Selector </h2>
+	<div id="app">
+		<div class="container">
+			<p class="hello">Hello</p>
+			<p class="hola">Hola</p>
+		</div>
+		<div class="other">
+			I am left behind...
+		</div>
+	</div>
+</body>
+</html>
