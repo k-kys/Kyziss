@@ -47,5 +47,6 @@ console.log(container.parentElement.parentElement.querySelector('#demo').previou
 
 var h1 = document.querySelector("h1");
 console.log('h1 = ', h1);
-console.log('get text của h1 = ', h1.innerText);
+console.log('get text của h1 = ', h1.innerText); // get giá trị h1 trước khi set
 h1.innerText = 'Javascript DOM edit'; // set giá trị mới
+console.log('get text của h1 sau SET = ', h1.innerText); // get giá trị h1 sau khi set
