@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>CSS Selector</title>
+</head>
+
+<body>
+    <div class="container">
+        <p>
+            CSS Selector được sử dụng để tìm kiếm (Hoặc lựa chọn) các phần tử trong tài liệu HTML để áp dụng kiểu dáng (style) cho chúng.
+        </p>
+        <h2>Basic Selector</h2>
+        <p>
+            Các Selector cơ bản giúp bạn lựa chọn các phần tử dựa trên Name, ID, Class hoặc Attribute của nó.
+        </p>
+        <h2>Combining Selector</h2>
+        <p>
+            <table class="table table-hover table-striped">
+                <tbody>
+                    <tr>
+                        <td><strong>Combinator</strong></td>
+                        <td><strong>Syntax</strong></td>
+                        <td><strong>Example</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Descendant combinator</td>
+                        <td><code><var>A</var> <var>B</var></code></td>
+                        <td>div span<br> div .item</td>
+                    </tr>
+                    <tr>
+                        <td>Child combinator</td>
+                        <td><code><var>A</var> <var>&gt; B</var></code></td>
+                        <td>ul &gt; li</td>
+                    </tr>
+                    <tr>
+                        <td>General sibling combinator</td>
+                        <td><code><var>A</var> <var>~ B</var></code></td>
+                        <td>p ~ span</td>
+                    </tr>
+                    <tr>
+                        <td>Adjacent sibling combinator</td>
+                        <td><code><var>A</var> <var>+ B</var></code></td>
+                        <td>h2 + p</td>
+                    </tr>
+                    <tr>
+                        <td>Column combinator</td>
+                        <td><code><var>A</var> <var>|| B</var></code></td>
+                        <td><code>col || td</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+
+        <h2>Pseudo selectors</h2>
+        <p>
+            <table class="table table-striped table-hover">
+                <tbody>
+                    <tr>
+                        <td><strong>Pseudo</strong></td>
+                        <td><strong>Syntax</strong></td>
+                        <td><strong>Example</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Pseudo classes</td>
+                        <td><code><var>A</var>:<var>B</var></code></td>
+                        <td>a:visited</td>
+                    </tr>
+                    <tr>
+                        <td>Pseudo elements</td>
+                        <td><code><var>A::B</var></code></td>
+                        <td>p::first-line</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+
+        <h2>2- Universal selector</h2>
+        <p>
+            Universal selector (Bộ lựa chọn phổ quát): Lựa chọn tất cả các phần tử hoặc tất cả các phần tử của một namespace (không gian tên).
+        </p>
+        <table class="table table-striped table-hover">
+            <tbody>
+                <tr>
+                    <td><strong>Selector</strong></td>
+                    <td><strong>Mô tả</strong></td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Lựa chọn tất cả các phần tử.</td>
+                </tr>
+                <tr>
+                    <td>*|*</td>
+                    <td>Lựa chọn tất cả các phần tử.</td>
+                </tr>
+                <tr>
+                    <td>ns|*</td>
+                    <td>Lựa chọn tất cả các phần tử trong không gian tên <strong>ns</strong>.</td>
+                </tr>
+                <tr>
+                    <td>|*</td>
+                    <td>Lựa chọn tất cả các phần tử không được khai báo không gian tên.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>3- CSS Type Selector</h2>
+        <p>
+            CSS Type Selector giúp bạn tìm kiếm các phần tử theo tên. <br/> Nếu các CSS Selector có cùng một quy tắc bạn có thể viết chúng một cách ngắn gọn, các CSS Selector sẽ ngăn cách nhau bởi dấu phẩy và sử dụng chung một quy tắc. <br/>
+            <code>
+                <pre>
+                    /** Select H1 or H2 */
+                        h1, h2  {
+                        color: blue;
+                        }
+                </pre>
+            </code>
+        </p>
+
+        <h2>4- CSS Class Selector</h2>
+        <p>
+            CSS Class Selector lựa chọn các phần tử dựa trên giá trị của thuộc tính (attribute) class. <br/>
+            <pre>
+        <code>
+            .txt-green  {
+                color: green;
+             }
+        </code>
+    </pre>
+        </p>
+
+        <h2>5- CSS ID Selector</h2>
+        <p>
+            CSS ID Selector giúp bạn lựa chọn phần tử dựa trên giá trị của thuộc tính (attribute) ID, giá trị của thuộc tính ID phải khớp hoàn toàn với giá trị cho bởi Selector. Chú ý: CSS ID Selector "không phân biệt chữ hoa chữ thường" (Case insensitive). <br/>
+            <pre>
+        <code>
+            #demo  {
+                color: blue;
+                font-size: 30px;
+             }
+        </code>
+    </pre>
+        </p>
+
+        <h2>6- CSS Attribute Selector</h2>
+        <p>
+            CSS Attribute Selector giúp bạn lựa chọn các phần tử dựa trên thuộc tính hoặc giá trị của thuộc tính đã cho.
+        </p>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
