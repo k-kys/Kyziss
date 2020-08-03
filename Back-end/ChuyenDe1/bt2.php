@@ -15,42 +15,47 @@
         <h2>Cho một danh sách các số, hãy tính trung bình giá trị, giá trị lớn nhất, giá trị nhỏ nhất các phần tử trong danh sách đó.</h2>
 
         <?php
+        // thực hành với Mảng
         $list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         $total = 0;
-        $first = array_key_first($list);
-        $last = array_key_last($list);
-        echo "first = " . $first . "<br/> last = " . $last . "<br/>";
-
-        function Average($total) {
-            $average = 0;
-            $average = $total/9;
-            return $average;
-        }
-        
-
-        foreach ($list as $key => $value) {
+        $max = $list[0];
+        $min = $list[0];
+        $lengthList = count($list);
+        foreach ($list as $value) {
             $total += $value;
-
-            $max = 0;
             if ($max < $value) {
                 $max = $value;
             }
-
-            $min = 1;
             if ($min > $value) {
                 $min = $value;
             }
-
-            if ($key === 8) {
-                $avg = Average($total);
-            }
         }
-
+        $average = $total / $lengthList;
         
-        echo "Giá trị trung bình: " . $avg . "<br/>";
+        echo "Giá trị trung bình: " . $average . "<br/>";
         echo "Giá trị lớn nhất: " . $max . "<br/>";
         echo "Giá trị nhỏ nhất: " . $min . "<br/>";
         ?>
+
+
+        <!-- <?php
+        // thực hành với hàm
+        $list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        $max = max($list);
+        $min = min($list);
+
+        $total = 0;
+        $lengthList = count($list);
+        foreach ($list as $value) {
+            $total += $value;
+        }
+        $average = $total / $lengthList;
+        
+        echo "Giá trị trung bình: " . $average . "<br/>";
+        echo "Giá trị lớn nhất: " . $max . "<br/>";
+        echo "Giá trị nhỏ nhất: " . $min . "<br/>";
+        ?> -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>

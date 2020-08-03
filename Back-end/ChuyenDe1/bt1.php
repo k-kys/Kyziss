@@ -15,6 +15,7 @@
     <h2>Cho một danh sách các số, hãy tính tổng các phần tử trong danh sách đó</h2>
 
     <?php 
+    // thực hành với Mảng
         $list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         $total = 0;
         foreach ($list as $key => $value) {
@@ -22,6 +23,12 @@
         }
         echo "Tổng của mảng [1,2,3,4,5,6,7,8,9,10] là : " . $total;
     ?>
+    <!-- <?php 
+    // thực hành với Hàm
+        $list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        $total = array_sum($list);
+        echo "Tổng của mảng [1,2,3,4,5,6,7,8,9,10] là : " . $total;
+    ?> -->
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
