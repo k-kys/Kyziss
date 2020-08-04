@@ -34,6 +34,7 @@
         if (isset($_POST['num'])) {
             $num = $_POST['num'];
             $vitri = -1;
+
             for ($i = 0; $i < $countds - 1; $i++) { 
                 if ($ds[$i] == $num) {
                     $vitri = $i;
@@ -41,6 +42,7 @@
                 }
             }
             echo "vị trí = " . $vitri . "<br/>";
+            
             if ($vitri != -1) {
                 // Dồn phần tử thứ i = vitri về bên trái 1 vị trí
                 for ($i = $vitri + 1; $i < $countds; $i++) { 
