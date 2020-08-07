@@ -59,22 +59,22 @@
                         }
                         // Bỏ phần tử cuối
                         array_pop($arr);
-                        // echo "Mảng sau khi xóa phần tử: ";
-                        // for ($i=0; $i < $countArr; $i++) { 
-                        //     echo $arr[$i] . " ";
-                        // };
+                        echo "Mảng sau khi xóa phần tử: ";
+                        for ($i=0; $i < $countArr; $i++) { 
+                            echo $arr[$i] . " ";
+                        };
                     } 
                     $vitri = -1;
                 } while ($check == true);
 
-                if ($vitri != -1) {
-                    echo "Mảng sau khi xóa phần tử: ";
-                    for ($i=0; $i < $countArr; $i++) { 
-                        echo $arr[$i] . " ";
-                    }
-                } else {
-                    echo "Phần tử không có trong mảng";
-                }
+                // if ($vitri != -1) {
+                //     echo "Mảng sau khi xóa phần tử: ";
+                //     for ($i=0; $i < $countArr; $i++) { 
+                //         echo $arr[$i] . " ";
+                //     }
+                // } else {
+                //     echo "Phần tử không có trong mảng";
+                // }
                 
             }
             ?>

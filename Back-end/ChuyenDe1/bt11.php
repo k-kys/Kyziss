@@ -18,13 +18,22 @@
 	</head>
 	<body>
 		<div class="container">
-			<h2></h2>
+			<h2>Cho một danh sách các số, hãy sắp xếp các phần tử trong danh sách tăng dần</h2>
 			
 
 			<?php 
-				if (isset()) {
-					# code...
+				$ds = [7,9,3,8,6,1,2,5,4];
+				for ($i=0; $i < count($ds); $i++) { 
+					for ($j = $i + 1; $j < count($ds); $j++) { 
+						if ($ds[$j] < $ds[$i]) {
+							$temp = $ds[$i];
+							$ds[$i] = $ds[$j];
+							$ds[$j] = $temp;
+						}
+					}
 				}
+				echo "Danh sách sắp xếp tăng dần: ";
+				print_r($ds);
 			 ?>
 		</div>
 

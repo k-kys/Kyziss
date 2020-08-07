@@ -18,13 +18,22 @@
 	</head>
 	<body>
 		<div class="container">
-			<h2></h2>
+			<h2>Cho 2 danh sách A và B, hãy đưa ra phần giao của 2 danh sách đó</h2>
 			
 
 			<?php 
-				if (isset()) {
-					# code...
+			$dsA = [1,2,3,4,5];
+			$dsB = [4,5,6,7,8];
+			$giao = [];
+			for ($i=0; $i < count($dsA); $i++) { 
+				for ($j=0; $j < count($dsB); $j++) { 
+					if ($dsA[$i] == $dsB[$j]) {
+						$giao[] = $dsA[$i];
+					}
 				}
+			}
+			echo "Giao của hai mảng là: ";
+			print_r($giao);
 			 ?>
 		</div>
 

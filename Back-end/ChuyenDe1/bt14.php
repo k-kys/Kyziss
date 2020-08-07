@@ -18,13 +18,30 @@
 	</head>
 	<body>
 		<div class="container">
-			<h2></h2>
+			<h2>Cho 2 danh sách A và B, hãy đưa ra phần hợp của 2 danh sách đó</h2>
 			
 
 			<?php 
-				if (isset()) {
-					# code...
+			$dsA = [1,2,3,4,5];
+			$dsB = [4,5,6,7,8];
+			print_r($dsA); echo "<br/>";
+			print_r($dsB); echo "<br/>";
+			$hop = [];
+			$count = 0;
+			for ($i=0; $i < count($dsA); $i++) { 
+				for ($j=0; $j < count($dsB); $j++) { 
+					if ($dsA[$i] == $dsB[$j]) {
+						$count++;
+					}
 				}
+				if ($count == 0) {
+					$dsBsize = count($dsB) + 1;
+					$dsB[$dsBsize - 1] = $dsA[$i];
+				}
+				$count = 0;
+			}
+			echo "Hợp của hai mảng là: ";
+			print_r($dsB);
 			 ?>
 		</div>
 
