@@ -32,7 +32,8 @@
 					if ($ds[$i] == $ds[$j]) {
 						$dem++;
 						$m = $j;
-						// xóa các phần tử giống nhau trong mảng
+						
+						// dồn phần tử về bên trái 1 vị trí
 						for ($k = $m + 1; $k < count($ds); $k++) { 
 							$ds[$m] = $ds[$k];
 							$m++;

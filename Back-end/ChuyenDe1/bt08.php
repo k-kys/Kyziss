@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title Page</title>
+    <title>Bài tập 8</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -33,45 +33,50 @@
             </form>
 
             <?php 
-            $arr = [1, 4, 6, 8, 1, 6, 8];
-            $countArr = count($arr);
+            $ds = [1, 4, 6, 8, 1, 6, 8];
+            echo "Mảng cho sẵn: ";
+            print_r($ds);
+
             if (isset($_POST['num'])) {
                 $num = $_POST['num'];
                 $check = false;
                 $vitri = -1;
-
-
+                
                 
                 do {
-                    for ($i=0; $i < $countArr - 1; $i++) { 
-                        if ($arr[$i] == $num) {
+                    for ($i=0; $i < count($ds) - 1; $i++) { 
+                        if ($ds[$i] == $num) {
                             $vitri = $i;
                             $check = true;
                             break;
                         }
+
                     }
 
                     if ($vitri != -1) {
                         // Dồn phần tử i về bên trái 1 vị trí
-                        for ($i = $vitri + 1; $i < $countArr; $i++) { 
-                            $arr[$vitri] = $arr[$i];
+                        for ($i = $vitri + 1; $i < count($ds); $i++) { 
+                            $ds[$vitri] = $ds[$i];
                             $vitri++;
                         }
                         // Bỏ phần tử cuối
-                        array_pop($arr);
-                        echo "Mảng sau khi xóa phần tử: ";
-                        for ($i=0; $i < $countArr; $i++) { 
-                            echo $arr[$i] . " ";
-                        };
+                        array_pop($ds);
+                        echo "<hr/>Mảng sau khi xóa phần tử: ";
+                        for ($i=0; $i < count($ds); $i++) { 
+                            echo $ds[$i] . " ";
+                        }
                     } 
                     $vitri = -1;
                 } while ($check == true);
 
+
+                
+
                 // if ($vitri != -1) {
-                //     echo "Mảng sau khi xóa phần tử: ";
-                //     for ($i=0; $i < $countArr; $i++) { 
-                //         echo $arr[$i] . " ";
-                //     }
+                // echo "<br/>Mảng sau khi xóa phần tử: ";
+                // for ($i=0; $i < count($ds); $i++) { 
+                //     echo $ds[$i] . " ";
+                // }
                 // } else {
                 //     echo "Phần tử không có trong mảng";
                 // }

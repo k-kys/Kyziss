@@ -41,14 +41,14 @@
                     break;
                 }
             }
-            echo "vị trí = " . $vitri . "<br/>";
+            // echo "vị trí = " . $vitri . "<br/>";
             
             if ($vitri != -1) {
                 // Dồn phần tử thứ i = vitri về bên trái 1 vị trí
                 for ($i = $vitri + 1; $i < $countds; $i++) { 
                     $ds[$vitri] = $ds[$i];
-                    print_r($ds);
-                    echo "<br/>";
+                    // print_r($ds);
+                    // echo "<br/>";
                     $vitri++;
 
                 }

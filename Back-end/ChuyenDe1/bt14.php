@@ -26,7 +26,6 @@
 			$dsB = [4,5,6,7,8];
 			print_r($dsA); echo "<br/>";
 			print_r($dsB); echo "<br/>";
-			$hop = [];
 			$count = 0;
 			for ($i=0; $i < count($dsA); $i++) { 
 				for ($j=0; $j < count($dsB); $j++) { 
