@@ -6,16 +6,33 @@
 	<title>Add customer</title>
 </head>
 <body>
-	Email:<?= $_POST["email_address"]?> <br/>
-	Pass:<?= $_POST["password"]?> <br/>
-	rePass:<?= $_POST["re_password"]?> <br/>
-	Complete Name:<?= $_POST["complete_name"]?> <br>
-	Address 1:<?= $_POST["address1"]?> <br>
-	Address 2:<?= $_POST["address2"]?> <br>
-	City:<?= $_POST["city"]?> <br>
-	State:<?= $_POST["state"]?> <br>
-	Country:<?= $_POST["country"]?> <br>
-	Zip Code:<?= $_POST["zip_code"]?> <br>
-	Phone No:<?= $_POST["phone_no"]?> <br>
+	<?php 
+	$connect = mysqli_connect("localhost", "root", "", "shopping") or die("Please, check the server connection.");
+
+	$emailAdress = $_POST['email_address'];
+	$password = md5($_POST["password"]);
+	$repassword = md5($_POST["re_password"]);
+	$completeName = $_POST['complete_name'];
+	$address1 = $_POST['address1'];
+	$address2 = $_POST['address2'];
+	$city = $_POST['city'];
+	$state = $_POST['state'];
+	$country = $_POST['country'];
+	$zipcode = $_POST['zip_code'];
+	$phoneNo = $_POST['phone_no'];
+
+	$sql = "INSERT INTO customers(email_address, password, complete_name, address1, address2, city, state, country, zip_code, phone_no) VALUES ('$emailAdress', '$password', '$completeName', '$address1', '$address2', '$city', '$state', '$country', '$zipcode', '$phoneNo')";
+
+	$result = mysqli_query($connect, $sql) or die(mysql_error());
+
+	if ($result) {
+		?>
+		<p>Dear, <?= $completeName ?> your account is successfully created. </p>
+		<?php
+	} else {
+		echo "Some error occurred. Please use different email address";
+	}
+	 
+	 ?>
 </body>
 </html>

@@ -33,9 +33,9 @@ function validate(userForm) {
 	if (divRePass.hasChildNodes()) {
 		divRePass.removeChild(divRePass.firstChild);
 	}
-	if (userForm.password.value != userForm.re_password.value) {
+	if (userForm.re_password.value != userForm.password.value) {
 		divRePass.appendChild(document.createTextNode("The two password don\'t match"));
-		userForm.password.focus();
+		userForm.re_password.focus();
 		return false;
 	}
 

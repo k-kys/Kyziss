@@ -8,32 +8,37 @@
 	<script src="//code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<title>Signup</title>
+	<script lang="javascript" type="text/javascript" src="checkform.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
 		<div class="col-md-6">
-			<form action="addcustomer.php" method="POST" role="form">
+			<form action="addcustomer.php" method="POST" role="form" onsubmit="return validate(this);">
 				<legend style="font-family: lobster">Signup</legend>
 				
 				<div class="form-group">
 					<label for="">Email address: </label>
 					<input type="text" class="form-control" name="email_address" id="" placeholder="Input field">
+					<span id="emailmsg"></span>
 				</div>
 				
 				<div class="form-group">
 					<label for="">Password: </label>
 					<input type="password" class="form-control" name="password" id="" placeholder="Input field">
+					<span id="passwdmsg"></span>
 				</div>
 
 				<div class="form-group">
 					<label for="">ReType Password: </label>
 					<input type="password" class="form-control" name="re_password" id="" placeholder="Input field">
+					<span id="repasswdmsg"></span>
 				</div>
 
 				<div class="form-group">
 					<label for="">Complete Name: </label>
 					<input type="text" class="form-control" name="complete_name" id="" placeholder="Input field">
+					<span id="usrmsg"></span>
 				</div>
 
 				<div class="form-group">
