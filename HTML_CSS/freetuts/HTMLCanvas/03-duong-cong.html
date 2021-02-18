@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+
+        // Xác đinh tâm là trọng tâm của Canvas
+        var x = canvas.width / 2;
+        var y = canvas.height / 2;
+
+        // bán kính 75px
+        var radius = 75;
+
+        // Góc bắt đầu là 1.1PI
+        var startAngle = 1.1 * Math.PI;
+
+        // Góc kết thúc là 1.9PI
+        var endAngle = 1.9 * Math.PI;
+
+        // Cùng chiều kim đồng hồ
+        var counterClockwise = false;
+
+        // Vẽ đường cung
+        context.beginPath();
+        context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+        context.lineWidth = 15;
+
+        // line color
+        context.strokeStyle = 'black';
+        context.stroke();
+    </script>
+
+Vẽ đường cong bậc hai trong Canvas
+    Điểm bắt đầu là (20, 20) trong hàm context.moveTo(20, 20).
+    Điểm điều khiển là (20, 100) trong hàm context.quadraticCurveTo(20, 100, 200, 20).
+    Điểm kết thúc là (200, 20) trong hàm  context.quadraticCurveTo(20, 100, 200, 20).
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+
+        context.beginPath();
+        context.moveTo(20, 20); // Điểm bắt đầu vẽ
+        context.quadraticCurveTo(20, 100, 200, 20); //vẽ qua các điểm
+        context.lineWidth = 1;
+
+        // line color
+        context.strokeStyle = 'black';
+        context.stroke();
+    </script>
+
+Vẽ đường cong Bezier trong Canvas
+    Điểm bắt đầu là (20, 20) trong hàm context.moveTo(20, 20).
+    Điểm điều khiển 1 là (20, 100) trong hàm context.quadraticCurveTo(20, 100, 200, 100, 200, 20).
+    Điểm điều khiển 2 là (200, 100) trong hàm context.quadraticCurveTo(20, 100, 200, 100, 200, 20).
+    Điểm kết thúc là (200, 20) trong hàm  context.quadraticCurveTo(20, 100, 200, 100, 200, 20).
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(20, 20);
+        ctx.bezierCurveTo(20, 100, 200, 100, 200, 20);
+        ctx.stroke();
+    </script>
+</body>
+</html>

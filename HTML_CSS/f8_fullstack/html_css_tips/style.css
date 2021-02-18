@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+ 01 CĂN GIỮA  
+ */
+
+
+/*
+.box {
+    background-color: orange;
+    height: 100px;
+}
+
+h3 {
+    text-align: center;
+    /* Căn giữa theo chiều ngang */
+
+line-height: 100px;
+
+/* Căn chiều dọc, cho độ cao dòng bằng với div sẽ tự căn giữa dòng */
+
+
+}
+*/
+/* 
+02 BEM BUTTON
+*/
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetica Neue";
+}
+body>div {
+    margin: auto;
+}
+
+/* Block */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    min-width: 120px;
+    transition: opacity 0.2s ease;
+    /* transition tạo hiệu ứng cho opacity là ease, khi hover sẽ có 0.2s để xuất hiện hiệu ứng cho hover */
+}
+.btn--size-l {
+    padding: 16px 56px;
+}
+.btn--size-s {
+    padding: 8px 32px;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+.btn+.btn {
+    /* Một button ngay sau button trước sẽ chịu ảnh hưởng */
+    
+    margin-left: 16px;
+}
+.btn--success {
+    background-color: #71be34;
+}
+.btn--warning {
+    background-color: #ffb702;
+}
+.btn--danger {
+    background-color: #ff623d;
+}
+.btn-disable {
+    opacity: 0.5 !important;
+    cursor: default;
+}
+
+/*
+ 03 TABS UI 
+ */
+
+/*
+body {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+}
+
+body>div {
+    margin: 15% auto 0;
+    max-width: 720px;
+}
+
+.tabs {
+    display: flex;
+    position: relative;
+}
+
+.tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #c23564;
+    transition: all 0.2s ease;
+}
+
+.tab-item {
+    min-width: 80px;
+    padding: 16px 20px 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #c23564;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.tab-icon {
+    font-size: 24px;
+    width: 32px;
+    position: relative;
+    top: 2px;
+}
+
+.tab-item:hover {
+    opacity: 1;
+    background-color: rgba(194, 53, 100, 0.05);
+    border-color: rgba(194, 53, 100, 0.1);
+}
+
+.tab-item.active {
+    opacity: 1;
+}
+
+.tab-content {
+    padding: 28px 0;
+}
+
+.tab-pane {
+    color: #333;
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-pane h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+*/
+
+/* 
+04 TOAST MESSAGE
+*/
+body {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    background-color: #ccc;
+}
+
+/*=== Toast Message ===*/
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 999999;
+}
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    border-left: 4px solid;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    transition: all linear .3s;
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+.toast--success {
+    border-color: #47d864;
+}
+.toast--success .toast__icon {
+    color: #47d864;
+}
+.toast--info {
+    border-color: #2f86eb;
+}
+.toast--info .toast__icon {
+    color: #2f86eb;
+}
+.toast--warning {
+    border-color: #ffc012;
+}
+.toast--warning .toast__icon {
+    color: #ffc012;
+}
+.toast--error {
+    border-color: #ff623d;
+}
+.toast--error .toast__icon {
+    color: #ff623d;
+}
+.toast+.toast {
+    margin-top: 24px;
+}
+.toast__icon,
+.toast__close {
+    padding: 0 16px;
+}
+.toast__icon {
+    font-size: 24px;
+}
+.toast__body {
+    /* content ngắn nhưng vẫn giữ độ rộng (ngang) */
+    
+    flex-grow: 1;
+}
+.toast__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+.toast__msg {
+    font-size: 14px;
+    color: #888;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+.toast__close {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}

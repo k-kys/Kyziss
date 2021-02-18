@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lớp giả</title>
+    <style>
+        * {
+            font-size: 30px;
+        }
+        
+        .box {
+            width: 100%;
+            height: 120px;
+            background: rgb(190, 124, 157);
+        }
+        
+        .hover:hover {
+            color: red;
+        }
+        
+        .active:active {
+            color: yellow;
+        }
+        
+        li:first-child {
+            color: blue;
+        }
+        
+        li:last-child {
+            color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <h2>CSS Pseudo-classes</h2>
+    <ul>
+        <li>:root - html</li>
+        <li class="hover">:hover - khi di chuột lên</li>
+        <li class="active">:active - khi bấm chuột vào</li>
+        <li>:first-child - phần tử con đầu tiên</li>
+        <li>:last-child - phần tử con cuối cùng</li>
+    </ul>
+</body>
+
+</html>

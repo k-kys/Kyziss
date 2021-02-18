@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM button</title>
+    <link rel="stylesheet" href="02.css" />
+</head>
+
+<body>
+    <div>
+        <button class="btn btn--size-s btn--success">GO TO NEXT APPROVAL</button>
+        <button class="btn btn--size-s btn--warning">OK</button>
+        <button class="btn btn--size-s btn--danger">TRY AGAIN</button>
+    </div>
+    <div>
+        <button class="btn btn--success">GO TO NEXT APPROVAL</button>
+        <button class="btn btn--warning">OK</button>
+        <button class="btn btn--danger">TRY AGAIN</button>
+    </div>
+    <div>
+        <button class="btn btn--size-l btn--success">GO TO NEXT APPROVAL</button>
+        <button class="btn btn--size-l btn--warning">OK</button>
+        <button class="btn btn--size-l btn--danger">TRY AGAIN</button>
+    </div>
+
+    <!--
+        BEM: là tiêu chuẩn đặt tên class khi viết CSS
+
+        Ý NGHĨA
+        - Viết tắt của Block Element Modifier
+            - Block: Khối
+            - Element: Thành phần trong khối
+            - Modifier: Bổ sung ý nghĩa cho Block và Element
+
+        TẠI SAO PHẢI DÙNG BEM
+        - Mỗi người đặt một kiểu
+        - Members đặt class trùng nhau, CSS đè lên nhau
+
+        CÚ PHÁP
+        - .block
+        - .block_element
+        - .block--modifier
+        - .block__element--modifier
+
+        TÍNH ỨNG DỤNG
+        - Xây dựng layout website
+        - Xay dựng thành phần trên website
+
+        ƯU ĐIỂM
+        - Tính rõ ràng
+        - Tái sử dụng dễ dàng
+        - Giúp team làm việc với nhu dễ dàng
+        - Tính module, không lo CSS của class này nhr hưởng lên CSS của class khác
+
+        NHƯỢC ĐIỂM
+        - Tên class dài
+        - Một số người cho là xấu
+
+        KHI NÀO DÙNG BEM
+        - Dự án nhiều members
+        - Dự án lớn, số lượng pages nhiều hoặc số lượng các thành phần trên giao diện nhiều
+
+        THỰC HÀNH
+        - Làm button:
+            - Enable: pointer, hover effect
+            - Disable: arrow, no effect
+        - Làm message
+        - Làm một thành phần trên website
+     -->
+</body>
+
+</html>

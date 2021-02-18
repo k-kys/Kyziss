@@ -1,0 +1,12 @@
+img {
+    width: 200px;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    background-image: url('https://i.pinimg.com/564x/27/19/a2/2719a2c9d10e854c74e1d1e8654c4f9e.jpg'), url('http://placehold.it/200x200');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /*background: url('https://i.pinimg.com/564x/27/19/a2/2719a2c9d10e854c74e1d1e8654c4f9e.jpg') no-repeat 100%*/
+}

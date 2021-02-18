@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+    <script>
+        // Lấy đối tượng Canvas
+        var canvas = document.getElementById('myCanvas');
+
+        // Chọn đối tượng vẽ 2D
+        var context = canvas.getContext('2d');
+
+        // Tiến hành vẽ
+        context.beginPath();        // Khai báo vẽ đường thẳng mới
+        context.moveTo(10, 10);     // Điểm bắt đầu
+        context.lineTo(490, 190);   // Điểm kết thúc. Dùng nhiều lần sẽ ra các đường thẳng nối tiếp nhau
+        context.lineWidth = 15;     // rộng 15px
+        context.strokeStyle = 'blue';// Màu xanh
+        // định dạng 2 đầu đường thẳng
+        //context.lineCap = 'butt';   // vuông góc tại điểm, có chiều bình thường
+        context.lineCap = 'round';  // bo tròn, dài hơn bình thường do hai đầu bổ sung một đoạn bo tròn.
+        //context.lineCap = 'square'; // bo hình chữ nhật, dài hơn bình thường do hai đầu bổ sung đoạn hình chữ nhật.
+        context.stroke();           // Tiến hành vẽ
+    </script>
+</body>
+</html>

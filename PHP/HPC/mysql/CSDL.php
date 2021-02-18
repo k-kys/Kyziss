@@ -13,8 +13,12 @@
 	}else{
 		echo "Kết nối thành công<br/>";
 	}
-	//hoặc viết gọn lại 
+	//hoặc viết gọn lại
 	//$con = mysqli_connect($host, $user, $pass, $data) or die("Kết nối không thành công");
+	//
+	//đặt unicode để hiển thị tiếng việt
+	mysqli_query($con,"SET CHARACTER SET 'utf8'");
+	mysqli_query($con,"SET SESSION collation_connection ='utf8_unicode_ci'");
 
 	// TRUY VẤN
 	//mysqli_query($con, "set names utf8");

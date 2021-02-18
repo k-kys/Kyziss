@@ -1,0 +1,40 @@
+body {
+    font-family: Tahoma;
+    font-size: 13px;
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#menu_top {
+    background: #ff99ff;
+    height: 40px;
+}
+
+#banner {
+    background: red;
+    height: 180px;
+    width: 1000px;
+}
+
+#main #left {
+    width: 800px;
+    background: pink;
+    float: left;
+    height: 200px;
+}
+
+#main #right {
+    width: 50px;
+    background: blue;
+    float: right;
+    height: 200px;
+}
+
+#footer {
+    background: #000;
+    width: 1000px;
+    text-align: center;
+    height: 60px;
+    color: #fff;
+    clear: both;
+}

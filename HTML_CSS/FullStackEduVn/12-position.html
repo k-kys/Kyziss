@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+        /*
+        Position Relative
+        */
+        /* h1 {
+            position: relative;
+            top: 110px;
+            left: 100px;
+            top, left chỉ có tác dụng khi có position:
+        } */
+        /*
+        Position Absolute
+        di chuyển child xung quanh parent (parent gần nhất cũng có position)
+        */
+        /*
+        .box {
+            width: 100%;
+            height: 120px;
+            background-color: #333;
+        }
+        
+        .box-child {
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            position: absolute;
+        }
+        */
+        /*
+        Position Fixed
+        */
+        /*
+        .header {
+            width: 100%;
+            height: 42px;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+        }
+        
+        h1 {
+            margin-top: 100px;
+        }
+        
+        ul {
+            height: 2000px;
+        }
+        */
+        /*
+        Position Sticky
+        */
+        
+        h1 {
+            margin-top: 40px;
+            padding: 0 16px;
+            color: #fff;
+            background-color: #333;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+        }
+        
+        ul {
+            height: 2000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="box">
+        <div class="box-child"></div>
+    </div>
+    <h1>Position</h1>
+    <ul>
+        <li>Relative - tương đối</li>
+        <li>Absolute - tuyệt đối, phụ thuộc đối tượng khác</li>
+        <li>Fixed - phụ thuộc khung trình duyệt</li>
+        <li>Sticky - bám dính khung trình duyệt (it dùng)</li>
+    </ul>
+</body>
+
+</html>

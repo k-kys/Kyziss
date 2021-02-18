@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Clip</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+        /* Background-clip */
+        /*
+      .header {
+          width: 100%;
+          height: 100px;
+          background-color: red;
+          padding: 20px;
+          box-sizing: border-box;
+          border: 10px dashed #ccc;
+          background-clip: content-box;
+          đổ màu cho thuộc tính
+      }
+      */
+        /* background-image */
+        /*
+      .header {
+          width: 100%;
+          height: 100vh;
+          background-image: url(https://thuthuatnhanh.com/wp-content/uploads/2019/07/girl-xinh-dep-thanh-lich.jpg);
+          background-image: linear-gradient( 45deg, rgba(255, 150, 0, 0.5), rgba(0, 0, 255, 0.5)), url(https://thuthuatnhanh.com/wp-content/uploads/2019/07/girl-xinh-dep-thanh-lich.jpg);
+          background-image: url(https://thumbs.dreamstime.com/b/teal-doggy-paw-print-tile-pattern-repeat-background-seamless-repeats-68378380.jpg);
+          background-size: 200px;
+          background-repeat: repeat;
+      }
+      */
+        /* Background-size keyword */
+        /* .header {
+          width: 100%;
+          height: 100vh;
+          background-image: url(https://thuthuatnhanh.com/wp-content/uploads/2019/07/girl-xinh-dep-thanh-lich.jpg);
+          background-image: linear-gradient( 45deg, rgba(255, 150, 0, 0.5), rgba(0, 0, 255, 0.5)), url(https://thuthuatnhanh.com/wp-content/uploads/2019/07/girl-xinh-dep-thanh-lich.jpg);
+          background-size: cover;
+
+          contain: lấy đầy đủ ảnh theo width hoặc height, ảnh sẽ không bị che
+          cover: lấy chiều dài hơn làm 100%, ảnh bị cắt, không hở khoảng trắng
+
+          background-repeat: no-repeat;
+      } */
+        /* Background-origin */
+        /* .header {
+          width: 100%;
+          height: 100vh;
+          background-image: url(https://thuthuatnhanh.com/wp-content/uploads/2019/07/girl-xinh-dep-thanh-lich.jpg);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          border: 20px dashed #ccc;
+          padding: 20px;
+          box-sizing: border-box;
+          background-origin: border-box;
+          đổ ảnh từ vùng nào
+      } */
+        /* Background-position */
+        /* .header {
+          width: 100%;
+          height: 100vh;
+          background-image: url(https://thuthuatnhanh.com/wp-content/uploads/2019/07/girl-xinh-dep-thanh-lich.jpg);
+          background-size: 200px;
+          background-repeat: no-repeat;
+          background-position: top 20px right 20px;
+      } */
+        /*
+      Background shorthand
+      */
+        
+        .header {
+            width: 100%;
+            height: 100vh;
+            background: url(https://thuthuatnhanh.com/wp-content/uploads/2019/07/girl-xinh-dep-thanh-lich.jpg) no-repeat center / contain;
+            trước background-size phải có /
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+</body>
+
+</html>

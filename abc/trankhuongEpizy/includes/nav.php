@@ -1,6 +1,3 @@
-
-
-
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -13,11 +10,11 @@
 			</button>
 			<a class="navbar-brand" href="http://trankhuong.epizy.com">TranKhuong</a>
 		</div>
-		
+
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="">Home</a></li>
+				<li class="active"><a href="http://trankhuong.epizy.com">Home</a></li>
 				<li><a href="https://khuong2k.blogspot.com">Blog</a></li>
 			</ul>
 			<form class="navbar-form navbar-left" role="search">
@@ -31,7 +28,7 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
+						<li><a href="http://trankhuong.epizy.com/tinh-chieu-dai-rong-man-hinh.php">Tính kích thước màn hình</a></li>
 						<li><a href="#">Another action</a></li>
 						<li><a href="#">Something else here</a></li>
 						<li><a href="#">Separated link</a></li>
@@ -41,5 +38,3 @@
 		</div><!-- /.navbar-collapse -->
 	</div>
 </nav>
-
-
