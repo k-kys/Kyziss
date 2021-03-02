@@ -1,4 +1,3 @@
-
 Câu 4: Mảng là gì? Có mấy loại mảng trong PHP?
 
 answer:
@@ -9,32 +8,32 @@ Mảng bao gồm 2 thành phần là KEY và VALUE, key dùng để truy cập v
 
 Mảng(array) có 3 loại chính là:
 
-MảNG TUẦN TỰ: là mảng có key tự động tạo là chữ số tăng dần bắt đầu từ 0.
-    <?php
-    $arr = ['phantu1', 'phantu2', 'phantun'];
-     ?>
+MảNG TUẦN TỰ (Numeric): là mảng có key tự động tạo là chữ số tăng dần bắt đầu từ 0.
+<?php
+$arr = ['phantu1', 'phantu2', 'phantun'];
+?>
 
-MẢNG KHÔNG TUẦN TỰ: là mảng có key mà bạn phải tự định nghĩa bằng các ký tự chữ hoặc số, và key không được sắp xếp bất kỳ thứ tự nào.
-    <?php
-    $arr = [
-        'red' => 'Đây là màu đỏ',
-        'blue' => 'Đây là màu xanh',
-    ];
-     ?>
+MẢNG KHÔNG TUẦN TỰ / KẾT HỢP (ASSOCIATIVE): là mảng có key mà bạn phải tự định nghĩa bằng các ký tự chữ hoặc số, và key không được sắp xếp bất kỳ thứ tự nào.
+<?php
+$arr = [
+    'red' => 'Đây là màu đỏ',
+    'blue' => 'Đây là màu xanh',
+];
+?>
 
-MẢNG ĐA CHIỀU: là mảng có chứa ít nhất một mảng khác trong nó.
+MẢNG ĐA CHIỀU (Multidimensional): là mảng có chứa ít nhất một mảng khác trong nó.
 
-    <?php
-    $arr = [
-        'oto' => [
-            'red' => 'Oto màu đỏ',
-            'blue' => 'Oto màu xanh',
-        ],
-        'xemay' => [
-            'yellow' => 'Xe máy màu vàng',
-            'black' => 'Xe máy màu đen',
-        ]
-    ];
+<?php
+$arr = [
+    'oto' => [
+        'red' => 'Oto màu đỏ',
+        'blue' => 'Oto màu xanh',
+    ],
+    'xemay' => [
+        'yellow' => 'Xe máy màu vàng',
+        'black' => 'Xe máy màu đen',
+    ]
+];
 
-    echo $arr[oto][red];
-     ?>
+echo $arr[oto][red];
+?>
