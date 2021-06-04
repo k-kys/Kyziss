@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview 1 ảnh</title>
+</head>
+<body>
+    <!-- Up 1 ảnh -->
+    <label for="avatar">Upload</label>
+    <input id="avatar" type="file" name="avatar" onchange="ImagesFileAsURL()" style="visibility: hidden;">
+    <div id="displayImg"></div>
+
+    <script>
+        function ImagesFileAsURL() {
+            var fileSelected = document.getElementById('avatar').files;
+            if (fileSelected.length > 0) {
+                var fileToLoad = fileSelected[0];
+                var fileReader = new FileReader();
+                fileReader.onload = function (fileLoaderEvent) {
+                    var srcData = fileLoaderEvent.target.result;
+                    var newImg = document.createElement('img');
+                    newImg.src = srcData;
+                    newImg.width = 215;
+                    newImg.height = 215;
+                    newImg.alt = 'avatar preview';
+                    newImg.title = 'Avatar preview';
+                    newImg.style = 'border-radius: 5px';
+                    document.getElementById('displayImg').innerHTML = newImg.outerHTML;
+                }
+                fileReader.readAsDataURL(fileToLoad);
+            }
+        }
+    </script>
+
+
+
+    <!-- ******************************************************************* -->
+
+
+    <!-- Chọn mỗi lần 1 ảnh, nhiều ảnh -->
+    <!-- <input type="file" id="file" name="file" onchange="previewFile(this)">
+    <div id="preview"></div>
+    <script type="text/javascript">
+
+        // Cách 1: Sử dụng FileReader
+        //
+        // 1. Khi chọn 1 file sẽ gọi hàm previewFile
+        function previewFile(input) {
+            // 2. Lấy thông tin file và phần tử preview
+            const [file] = input.files;
+            const preview = document.getElementById('preview');
+            // 3. Tạo đối tượng FileReader
+            const reader = new FileReader();
+
+            // 5. Sau khi hoàn thành sẽ gọi hàm onload của reader
+            reader.onload = e => {
+                // 6. Tạo phần tử image và thiết lập thuộc tính src và gán bằng dữ liệu data base64 của reader result
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.width = 200;
+                img.height = 200;
+                img.alt = 'file';
+
+                // 7. Chèn image vào phần tử preview
+                preview.appendChild(img);
+            }
+            // 4. Tiến hành đọc file thông qua phương thức readAsDataURL
+            reader.readAsDataURL(file);
+        }
+
+
+/*
+        // Cách 2: Sử dụng window.URL
+        //
+        // 1. Khi chọn 1 file sẽ gọi hàm previewFile
+        function previewFile(input) {
+            // 2. Lấy thông tin file và phần tử preview
+            const [file] = input.files;
+            const preview = document.getElementById('preview');
+            const img = document.createElement('img');
+            // 3. Tạo một object url (dạng DOMString chứa thông tin của file) thông qua phương thức tĩnh revokeObjectURL của window.URL
+            const objURL = window.URL.createObjectURL(file);
+
+            // 4. Tạo phần tử image và thiết lập thuộc tính src và gán bằng dữ liệu dạng URL blob: được tạo từ object url ở bước 3
+            // 6. Giải phóng tham chiếu object url ở bước 3 thông qua phương thức tĩnh revokeObjectURL của window.URL
+            img.onload = () => window.URL.revokeObjectURL(objURL);
+            img.src = objURL;
+            img.width = 200;
+            img.height = 200;
+            img.alt = 'file';
+
+            // 5. Chèn image vào phần tử preview
+            preview.appendChild(img);
+        }
+        */
+    </script>
+-->
+</body>
+</html>

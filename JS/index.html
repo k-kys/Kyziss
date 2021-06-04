@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn sử dụng AJAX</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Title</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="load_data">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="txtTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="txtBody">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            //dòng này minh dùng để load data
+            LoadData();
+             $('body').on('click','.btnView',function(){
+                var id=$(this).data('id');
+                GetDataById(id);
+            });
+        });
+
+        //hàm để load data
+        // ở đây mình có sử dụng dùng công chuỗi các tr khi chạy qua từng bản ghi
+        //
+        function LoadData() {
+            $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/posts',
+                type: 'GET',
+                success: function(rs) {
+                    var str = "";
+                    $.each(rs, function(i, item) {
+                        str += "<tr>";
+                        str += "<td>" + (i + 1) + "</td>";
+                        str += "<td>" + item.title + "</td>";
+                        str += "<td><a class='btn btn-success btnView' data-id='" + item.id + "'>Xem</a></td>";
+                        str += "</tr>";
+
+                    });
+                    // id của thẻ tbody để hiển thị tất cả cá tr ra
+                    $('#load_data').html(str);
+                }
+            });
+        }
+
+
+        //đây là hàm để lấy ra 1 bản ghi theo id truyền vào.
+        function GetDataById(id) {
+            $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/posts/' + id,
+                type: 'GET',
+                success: function(rs) {
+                    $('#txtTitle').html(rs.title);
+                    $('#txtBody').html(rs.body);
+                    //sau khi data lấy xong thì hiện popup lên màn hình nhé.
+                    $('#exampleModal').modal('show');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

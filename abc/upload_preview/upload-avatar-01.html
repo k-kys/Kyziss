@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+  <style type="text/css">
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #avatar {
+      background-color: antiquewhite;
+      height: 200px;
+      width: 200px;
+      border: 3px solid #0af;
+      border-radius: 50%;
+      transition: background ease-out 200ms;
+    }
+
+    #preview {
+      position: relative;
+    }
+
+    /*hide input*/
+    input[type="file"] {
+      display: none;
+    }
+
+    /*button upload customer*/
+    button {
+      padding: 10px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      background-color: #08f;
+      box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+      0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+      transition: background-color ease-out 120ms;
+      position: absolute;
+      right: 0%;
+      bottom: 0%;
+    }
+
+    button:hover {
+      background-color: #45a;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+
+
+
+   <div id="preview">
+    <img id="avatar" src="./images.jfif" ></img>
+
+    <button id="upload-button" aria-labelledby="image" aria-describedby="image">
+      <i class="fas fa-camera fa-2x"></i>
+    </button>
+
+    <input type="file" class="file-upload" name="image" id="image" accept="image/*" />
+
+</div>
+
+
+</main>
+</body>
+
+<script type="text/javascript">
+  const UPLOAD_BUTTON = document.getElementById("upload-button");
+
+  const FILE_INPUT = document.querySelector("input[type=file]");
+
+  const AVATAR = document.getElementById("avatar");
+
+
+  UPLOAD_BUTTON.addEventListener("click", () => FILE_INPUT.click());
+
+  FILE_INPUT.addEventListener("change", event => {
+    const file = event.target.files[0];
+
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    reader.onloadend = () => {
+      AVATAR.setAttribute("aria-label", file.name);
+      // AVATAR.style.background = `url(${reader.result}) center center/cover`;
+      AVATAR.setAttribute('src', ${reader.result});
+    };
+  });
+
+
+  // $(document).ready(function() {
+
+  //   var readURL = function(input) => {
+  //     if (input.files && input.files[0]) {
+  //       var reader = new FileReader();
+
+  //       reader.onload = function(e) {
+  //         $('#avatar').attr('src', e.target.result);
+  //       }
+
+  //       reader.readAsDataURL(input.files[0]);
+  //     }
+  //   }
+
+
+
+  //   $('.file-upload').on('change', function() {
+  //     readURL(this);
+  //   });
+
+  //   $('#upload-button').on('click', function() {
+  //     $('.file-upload').click();
+  //   });
+
+  // });
+</script>
+</html>
